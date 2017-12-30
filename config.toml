@@ -1,0 +1,16 @@
+baseURL = "https://birros.github.io/"
+theme = "ananke"
+DefaultContentLanguage = "en"
+
+[params]
+background_color_class = "bg-mid-gray"
+featured_image = false
+mainSections = [ "journal" ]
+
+[Languages.en]
+title = "Birros"
+copyright = "This content is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
+
+[Languages.fr]
+title = "Birros"
+copyright = "Ce contenu est sous licence Creative Commons Attribution-ShareAlike 4.0 International License."

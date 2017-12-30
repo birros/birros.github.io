@@ -1,0 +1,65 @@
+---
+title: À propos
+featured_image: images/camille-orgel-58391.jpg
+menu:
+  main:
+    weight: -7
+---
+
+## Ligne éditoriale
+
+Étant nativement francophone les pages sont d'abord rédigées en français avant
+d'être traduites par mes soins en anglais.
+
+Ce site sert de vitrine autant pour exposer **mes créations** que **mes coups
+de cœur** portant aussi bien sur des *projets*, *idées*, *souhaits*, *méthodes*,
+*astuces*, *tutoriels*, *outils*, *objets*, *personnes*, *organisations*...
+
+Voulant être **constructif** chaque page est rédigée avec en tête un ensemble
+de principes : *concision*, *précision*, *clarté*, *pédagogie*.
+
+## Contributions
+
+N’hésitez pas à [ouvrir un ticket] ou [proposer des modifications] si une
+coquille ou un oubli se glisse dans une page. Si l'usage d'un gestionnaire de
+version vous est inconnu alors prenez directement contact avec moi.
+
+## Technologies
+
+L'ensemble des pages de ce site sont produites à l'aide du générateur de sites
+statiques [Hugo] et du thème [Ananke]. Les sources comme le site sont hébergés
+sur [GitHub].
+
+## Crédits et licences
+
+Toutes les images en vedette viennent de [Unsplash]. L'intégralité du contenu et
+des codes présentés sur le site sont publiés sous licence [CC-BY-SA] et
+[GPL-3.0].
+
+## Auteur
+
+Amoureux des sciences avec une nette préférence pour les maths, l'informatique
+et la physique, ma curiosité vagabonde aussi du côté de la philosophie, de
+l'économie et de la politique. Libre penseur par conviction, aucun tabou ou
+obscurantisme ne me fait peur.
+
+- **Courriel** : [birros@protonmail.com]
+- **GitHub** : [github.com/birros]
+- **Mastodon** : [birros@framapiaf.org]
+- **IRC** : Je suis souvent sur le canal #birros sur le réseau [Freenode] sous
+le pseudonyme @birros
+
+<!-- Liens externes et références -->
+
+[ouvrir un ticket]: foo
+[proposer des modifications]: foo
+[Hugo]: https://gohugo.io/
+[Ananke]: https://github.com/budparr/gohugo-theme-ananke
+[GitHub]: https://github.com/
+[GPL-3.0]: https://www.gnu.org/licenses/gpl-3.0.fr.html
+[CC-BY-SA]: https://creativecommons.org/licenses/by-sa/4.0/deed.fr
+[Unsplash]: https://unsplash.com/
+[birros@protonmail.com]: mailto:birros@protonmail.com
+[github.com/birros]: https://github.com/birros
+[Freenode]: https://freenode.net/
+[birros@framapiaf.org]: https://framapiaf.org/@birros
