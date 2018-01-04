@@ -41,15 +41,15 @@ and physics, my curiosity also wanders on the side of philosophy, economics
 and politics. Free thinker by conviction, no taboo or obscurantism frightens me.
 
 - **Email** : [birros@protonmail.com]
-- **GitHub** : [github.com/birros]
+- **GitHub** : [birros]
 - **Mastodon** : [birros@framapiaf.org]
 - **IRC** : I am often on channel #birros on the [Freenode] network under the
 pseudonym @birros
 
 <!-- External links and references -->
 
-[open a ticket]: foo
-[propose changes]: foo
+[open a ticket]: https://github.com/birros/birros.github.io-sources/issues
+[propose changes]: https://github.com/birros/birros.github.io-sources/pulls
 [Hugo]: https://gohugo.io/
 [Ananke]: https://github.com/budparr/gohugo-theme-ananke
 [GitHub]: https://github.com/
@@ -57,6 +57,6 @@ pseudonym @birros
 [CC-BY-SA]: https://creativecommons.org/licenses/by-sa/4.0/
 [Unsplash]: https://unsplash.com/
 [birros@protonmail.com]: mailto:birros@protonmail.com
-[github.com/birros]: https://github.com/birros
+[birros]: https://github.com/birros
 [Freenode]: https://freenode.net/
 [birros@framapiaf.org]: https://framapiaf.org/@birros

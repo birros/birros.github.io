@@ -20,21 +20,21 @@ de principes : *concision*, *précision*, *clarté*, *pédagogie*.
 
 ## Contributions
 
-N’hésitez pas à [ouvrir un ticket] ou [proposer des modifications] si une
-coquille ou un oubli se glisse dans une page. Si l'usage d'un gestionnaire de
-version vous est inconnu alors prenez directement contact avec moi.
+N’hésitez pas à [ouvrir un ticket (en)] ou [proposer des modifications (en)] si
+une coquille ou un oubli se glisse dans une page. Si l'usage d'un gestionnaire
+de version vous est inconnu alors prenez directement contact avec moi.
 
 ## Technologies
 
 L'ensemble des pages de ce site sont produites à l'aide du générateur de sites
-statiques [Hugo] et du thème [Ananke]. Les sources comme le site sont hébergés
-sur [GitHub].
+statiques [Hugo (en)] et du thème [Ananke (en)]. Les sources comme le site sont
+hébergés sur [GitHub (en)].
 
 ## Crédits et licences
 
-Toutes les images en vedette viennent de [Unsplash]. L'intégralité du contenu et
-des codes présentés sur le site sont publiés sous licence [CC-BY-SA] et
-[GPL-3.0].
+Toutes les images en vedette viennent de [Unsplash (en)]. L'intégralité du
+contenu et des codes présentés sur le site sont publiés sous licence [CC-BY-SA]
+et [GPL-3.0].
 
 ## Auteur
 
@@ -44,22 +44,22 @@ l'économie et de la politique. Libre penseur par conviction, aucun tabou ou
 obscurantisme ne me fait peur.
 
 - **Courriel** : [birros@protonmail.com]
-- **GitHub** : [github.com/birros]
+- **GitHub** : [birros]
 - **Mastodon** : [birros@framapiaf.org]
-- **IRC** : Je suis souvent sur le canal #birros sur le réseau [Freenode] sous
-le pseudonyme @birros
+- **IRC** : Je suis souvent sur le canal #birros sur le réseau [Freenode (en)]
+sous le pseudonyme @birros
 
 <!-- Liens externes et références -->
 
-[ouvrir un ticket]: foo
-[proposer des modifications]: foo
-[Hugo]: https://gohugo.io/
-[Ananke]: https://github.com/budparr/gohugo-theme-ananke
-[GitHub]: https://github.com/
+[ouvrir un ticket (en)]: https://github.com/birros/birros.github.io-sources/issues
+[proposer des modifications (en)]: https://github.com/birros/birros.github.io-sources/pulls
+[Hugo (en)]: https://gohugo.io/
+[Ananke (en)]: https://github.com/budparr/gohugo-theme-ananke
+[GitHub (en)]: https://github.com/
 [GPL-3.0]: https://www.gnu.org/licenses/gpl-3.0.fr.html
 [CC-BY-SA]: https://creativecommons.org/licenses/by-sa/4.0/deed.fr
-[Unsplash]: https://unsplash.com/
+[Unsplash (en)]: https://unsplash.com/
 [birros@protonmail.com]: mailto:birros@protonmail.com
-[github.com/birros]: https://github.com/birros
-[Freenode]: https://freenode.net/
+[birros]: https://github.com/birros
+[Freenode (en)]: https://freenode.net/
 [birros@framapiaf.org]: https://framapiaf.org/@birros
