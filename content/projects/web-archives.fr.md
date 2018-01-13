@@ -1,10 +1,10 @@
 ---
-title: "Archives Web"
+title: "WebArchives"
 ---
 
-Un **lecteur d'archives Web** offrant la possibilité de parcourir **hors ligne**
-des millions d'articles provenant de grands projets communautaires tels que
-[Wikipédia] ou [Wikisource].
+Un __lecteur d'archives web__ offrant la possibilité de parcourir __hors
+ligne__ des millions d'articles provenant de grands projets communautaires tels
+que [Wikipédia], [Wiktionnaire] ou [Wikisource].
 
 <!--more-->
 
@@ -18,9 +18,9 @@ des millions d'articles provenant de grands projets communautaires tels que
 
 ## Fonctionnalités
 
-- Liste des archives Web récemment ouvertes
-- Liste des archives Web locales disponibles
-- Liste des archives Web à télécharger
+- Liste des archives web récemment ouvertes
+- Liste des archives web locales disponibles
+- Liste des archives web à télécharger
 - Imprimer une page
 - Mode nuit (Support basique)
 - Commandes de zoom
@@ -32,44 +32,87 @@ des millions d'articles provenant de grands projets communautaires tels que
 - Multi-fenêtres
 - Multi-onglets
 - Page au hasard
-- Pages en bac à sable (les pages sont isolées du Web)
+- Pages en bac à sable (les pages sont isolées du web)
 - Demander confirmation lors de l'ouverture d'un lien externe
 
-## Installation et sources
+## Installation
 
-Si vous lisez ces lignes depuis un système [GNU/Linux] et que [Flatpak (en)] est
-installé, le lien qui suit vous permettra d'installer l'application sans
-effort : **[WebArchives]**. Autrement, vous devez exécuter la commande qui suit
-depuis un [terminal] :
+WebArchives a été développée et testée sous [GNU/Linux], avec [GNOME] en ligne
+de mire. Cependant celle-ci peut être utilisée sous d'autres environnements de
+bureau.
 
-```
-flatpak install https://flathub.org/repo/appstream/com.github.birros.WebArchives.flatpakref
-```
+Aucune méthode n’est fournie pour installer cette application sur d’autres
+plateformes, telles que __Windows__ ou __macOS__. S’agissant d’une application
+bureau celle-ci n’est pas compatible avec les plateformes mobiles comme
+__Android__ ou __iOS__.
 
-Aucune méthode n'est fournie pour installer cette application sur d'autres
-plateformes, telles que **Windows** ou **macOS**. S’agissant d'une application
-bureau celle-ci n'est pas compatible avec les plateformes mobiles comme
-**Android** ou **iOS**.
+### WebArchives au format Flatpak
 
-Les sources de l'application sont hébergées sur GitHub : [web-archives (en)].
-Pour l'installer depuis les sources veuillez consulter le fichier [HACKING.md
-(en)] présent sur le dépôt du logiciel.
+L'installation de [Flatpak] est requise : [Obtenir Flatpak (en)].
+
+Il faut ensuite ajouter le dépôt [Flathub (en)] et installer WebArchives depuis
+un [terminal] :
+
+    flatpak remote-add flathub https://flathub.org/repo/flathub.flatpakrepo
+    flatpak install flathub com.github.birros.WebArchives
+
+Si il s'agit de votre premier Flatpak, le redémarrage de votre session est
+nécessaire pour que l'application apparaisse dans votre lanceur. En outre il
+est possible de l'exécuter depuis un terminal :
+
+    flatpak run com.github.birros.WebArchives
+
+Il se peut que certains __problèmes__ apparaissent lors de l'exécution de
+l'application, notamment si votre environnement de bureau n'utilise pas [Gtk+],
+comme c'est le cas de __[Kde]__.
+
+L'installation de __deux services supplémentaires__ est alors requise du côté
+système pour résoudre ces problèmes, nécessitant l'exécution de l'une de ces
+commandes en fonction de votre distribution :
+
+__Debian & Ubuntu__ :
+
+    apt install tracker gvfs-backends
+
+__Fedora__ :
+
+    dnf install tracker gvfs
+
+### Autres méthodes d'installation
+
+La mise en place d'une méthode d'installation usuelle pour les grandes
+distributions existantes est en préparation, avec pour priorité __Debian__ et
+__Ubuntu__.
 
 ## Alternatives
 
 Cette application est directement inspirée de l’application [Kiwix]. Ainsi
 WebArchives tout comme Kiwix peut lire les archives Web au [format ZIM]. Kiwix
-est disponible pour **Windows**, **GNU/Linux**, **iOS** et **Android**.
+est disponible pour __Windows__, __GNU/Linux__, __iOS__ et __Android__.
+
+## Liens utiles
+
+- [Code source de WebArchives (en)]
+- [Flatpakref de WebArchives (application externe)]
+- [Site internet de Kiwix]
+- [Liste des applications hébérgées sur Flathub (en)]
 
 <!-- Liens externes et références -->
 
 [Wikipédia]: https://fr.wikipedia.org/wiki/Wikip%C3%A9dia
+[Wiktionnaire]: https://fr.wikipedia.org/wiki/Wiktionnaire
 [Wikisource]: https://fr.wikipedia.org/wiki/Wikisource
 [GNU/Linux]: https://fr.wikipedia.org/wiki/Linux
-[Flatpak (en)]: https://flatpak.org/
-[WebArchives]: https://flathub.org/repo/appstream/com.github.birros.WebArchives.flatpakref
+[GNOME]: https://fr.wikipedia.org/wiki/GNOME
+[Flatpak]: https://fr.wikipedia.org/wiki/Flatpak
+[Obtenir flatpak (en)]: https://flatpak.org/getting.html
+[Flathub (en)]: https://flathub.org/
 [terminal]: https://fr.wikipedia.org/wiki/%C3%89mulateur_de_terminal
-[web-archives (en)]: https://github.com/birros/web-archives
-[HACKING.md (en)]: https://github.com/birros/web-archives/blob/master/HACKING.md
-[Kiwix]: http://www.kiwix.org/fr/
+[GTK+]: https://fr.wikipedia.org/wiki/GTK%2B
+[KDE]: https://fr.wikipedia.org/wiki/KDE
+[Kiwix]: https://fr.wikipedia.org/wiki/Kiwix
 [format ZIM]: https://fr.wikipedia.org/wiki/ZIM_(format_de_fichier_informatique)
+[Code source de WebArchives (en)]: https://github.com/birros/web-archives
+[Flatpakref de WebArchives (application externe)]: https://flathub.org/repo/appstream/com.github.birros.WebArchives.flatpakref
+[Site internet de Kiwix]: https://www.kiwix.org/fr/
+[Liste des applications hébérgées sur Flathub (en)]: https://flathub.org/apps.html
