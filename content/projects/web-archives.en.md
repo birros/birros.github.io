@@ -84,7 +84,7 @@ This application is directly inspired by the [Kiwix] application. In this way
 WebArchives as well as Kiwix can read the Web archives in [ZIM format]. Kiwix is
 available for __Windows__, __GNU/Linux__, __iOS__ and __Android__.
 
-## Useful Links
+## Useful links
 
 - [Source code of WebArchives]
 - [Flatpakref of WebArchives (external application)]
