@@ -11,11 +11,11 @@ menu:
 Being natively French-speaking, the pages are first written in French before
 being translated by me in English.
 
-This site serves as a showcase for **my creations** as well as **my favorites**
+This site serves as a showcase for __my creations__ as well as __my favorites__
 concerning *projects*, *ideas*, *wishes*, *methods*, *tips*, *tutorials*,
 *tools*, *objects*, *people*, *organizations*...
 
-Wishing to be **constructive**, each page is written with a set of principles in
+Wishing to be __constructive__, each page is written with a set of principles in
 mind : *concision*, *precision*, *clarity*, *pedagogy*.
 
 ## Contributions
@@ -40,10 +40,10 @@ Amateur of sciences with a strong preference for mathematics, computer science
 and physics, my curiosity also wanders on the side of philosophy, economics
 and politics. Free thinker by conviction, no taboo or obscurantism frightens me.
 
-- **Email** : [birros@protonmail.com]
-- **GitHub** : [birros]
-- **Mastodon** : [birros@framapiaf.org]
-- **IRC** : I am often on channel #birros on the [Freenode] network under the
+- __Email__ : [birros@protonmail.com]
+- __GitHub__ : [birros]
+- __Mastodon__ : [birros@framapiaf.org]
+- __IRC__ : I am often on channel #birros on the [Freenode] network under the
 pseudonym @birros
 
 <!-- External links and references -->

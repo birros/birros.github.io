@@ -11,11 +11,11 @@ menu:
 Étant nativement francophone les pages sont d'abord rédigées en français avant
 d'être traduites par mes soins en anglais.
 
-Ce site sert de vitrine autant pour exposer **mes créations** que **mes coups
-de cœur** portant aussi bien sur des *projets*, *idées*, *souhaits*, *méthodes*,
+Ce site sert de vitrine autant pour exposer __mes créations__ que __mes coups
+de cœur__ portant aussi bien sur des *projets*, *idées*, *souhaits*, *méthodes*,
 *astuces*, *tutoriels*, *outils*, *objets*, *personnes*, *organisations*...
 
-Voulant être **constructif** chaque page est rédigée avec en tête un ensemble
+Voulant être __constructif__ chaque page est rédigée avec en tête un ensemble
 de principes : *concision*, *précision*, *clarté*, *pédagogie*.
 
 ## Contributions
@@ -43,10 +43,10 @@ et la physique, ma curiosité vagabonde aussi du côté de la philosophie, de
 l'économie et de la politique. Libre penseur par conviction, aucun tabou ou
 obscurantisme ne me fait peur.
 
-- **Courriel** : [birros@protonmail.com]
-- **GitHub** : [birros]
-- **Mastodon** : [birros@framapiaf.org]
-- **IRC** : Je suis souvent sur le canal #birros sur le réseau [Freenode (en)]
+- __Courriel__ : [birros@protonmail.com]
+- __GitHub__ : [birros]
+- __Mastodon__ : [birros@framapiaf.org]
+- __IRC__ : Je suis souvent sur le canal #birros sur le réseau [Freenode (en)]
 sous le pseudonyme @birros
 
 <!-- Liens externes et références -->
