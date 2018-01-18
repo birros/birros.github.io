@@ -14,11 +14,11 @@ and insecurity, or a [database] and worst yet a heavy [framework]. My first
 choice was [Jekyll], fulfilling the first two criteria, until I discovered
 [Hugo].
 
-In addition to checking these same criteria, **Hugo** is a simple [executable]
+In addition to checking these same criteria, __Hugo__ is a simple [executable]
 allowing a complete and fast development, for my needs, without requiring the
 installation of a [plug-in] to have essential functionalities such as
-**multilingualism**, **[RSS feeds]**, or the ability to organize my content in
-**sections**.
+__multilingualism__, __[RSS feeds]__, or the ability to organize my content in
+__sections__.
 
 Apart from [rewriting] a few [templates] of the [Ananke] theme to allow
 navigation between English and French, the implementation consists of providing
@@ -26,7 +26,7 @@ some informations in the configuration file, such as the name of the website
 and the languages used, and arranging its content, written in [Markdown], in
 the `content` folder.
 
-The **Ananke** theme is the one given as example during the official
+The __Ananke__ theme is the one given as example during the official
 documentation tutorial. Although a little too *large* for my taste, this one
 offers good looking effortlessly.
 
@@ -37,7 +37,7 @@ beginning. Are there still some popular [proprietary software] in the world of
 [blogging] ?
 
 This solution largely satisfies my needs of the moment, in the future the
-implementation of a **comment** system will be done, my choice going to
+implementation of a __comment__ system will be done, my choice going to
 [Staticman].
 
 Hosting is provided by [GitHub Pages], the most judicious choice since the

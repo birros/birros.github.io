@@ -14,11 +14,11 @@ et d'insécurité, ni d'une [base de donnée] et encore moins d'un [cadriciel]
 lourd. Mon choix s'est d'abord porté vers [Jekyll (en)], remplissant les deux
 premiers critères, jusqu'à ma découverte de [Hugo (en)].
 
-En plus de cocher ces mêmes critères, **Hugo** se contente d'un simple
+En plus de cocher ces mêmes critères, __Hugo__ se contente d'un simple
 [exécutable] permettant un développement complet et rapide, pour mes besoins,
 sans nécessiter l'installation de [module supplémentaire] pour disposer de
-fonctionnalités essentielles comme le **multilinguisme**, les **[flux RSS]**,
-ou encore l'agencement de mon contenu en **sections**.
+fonctionnalités essentielles comme le __multilinguisme__, les __[flux RSS]__,
+ou encore l'agencement de mon contenu en __sections__.
 
 Hormis la [réécriture (en)] de quelques [gabarits] du thème [Ananke (en)] pour
 permettre la navigation entre l'anglais et le français, la mise en place
@@ -26,7 +26,7 @@ consiste à renseigner de rares informations dans le fichier de configuration,
 comme le nom du site ainsi que les langues employées, et à disposer son
 contenu, écrit en [Markdown], dans le dossier `content`.
 
-Le thème **Ananke** n'est autre que celui donné en exemple durant le tutoriel
+Le thème __Ananke__ n'est autre que celui donné en exemple durant le tutoriel
 de la documentation officielle. Bien qu'un peu trop *espacé* à mon goût
 celui-ci offre une esthétique appréciable à moindre frais.
 
@@ -37,7 +37,7 @@ Existe-t-il encore des [logiciels propriétaires] populaires dans le monde de la
 [publication personnelle] ?
 
 Cette solution comble largement mes besoins du moment, à l'avenir la mise en
-place d'un système de **commentaires** verra sûrement le jour, mon choix se
+place d'un système de __commentaires__ verra sûrement le jour, mon choix se
 portant à l'heure actuelle vers [Staticman (en)].
 
 L'hébergement est assuré par [GitHub Pages (en)], choix le plus judicieux dans
