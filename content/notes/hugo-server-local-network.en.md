@@ -10,17 +10,15 @@ in order to consult the website from another device, such as a [smartphone].
 
 <!--more-->
 
-```
-hugo server -D --disableFastRender --bind 0.0.0.0 --baseURL [BASEURL]
-```
+    hugo server -D --disableFastRender --bind 0.0.0.0 --baseURL [BASEURL]
 
 Explanation of the arguments :
 
-- **`-D`** : publish drafts
-- **`--disableFastRender`** : force the full rendering of the page, seems to
+- __`-D`__ : publish drafts
+- __`--disableFastRender`__ : force the full rendering of the page, seems to
 remove some rendering errors, to check it out
-- **`--bind 0.0.0.0`** : listen to requests regardless of their origin
-- **`--baseURL [BASEURL]`** : specify the address of the website, replace
+- __`--bind 0.0.0.0`__ : listen to requests regardless of their origin
+- __`--baseURL [BASEURL]`__ : specify the address of the website, replace
 `[BASEURL]` with a [URL] of the form `http://[IP]:1313`, where `[IP]`
 corresponds to the [IP address] of the server on the local network. Example :
 `http://192.168.1.14:1313`

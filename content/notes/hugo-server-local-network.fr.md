@@ -11,17 +11,15 @@ périphérique, comme par exemple un [ordiphone].
 
 <!--more-->
 
-```
-hugo server -D --disableFastRender --bind 0.0.0.0 --baseURL [BASEURL]
-```
+    hugo server -D --disableFastRender --bind 0.0.0.0 --baseURL [BASEURL]
 
 Explication des arguments :
 
-- **`-D`** : publier les brouillons
-- **`--disableFastRender`** : forcer le rendu complet de la page, semble
+- __`-D`__ : publier les brouillons
+- __`--disableFastRender`__ : forcer le rendu complet de la page, semble
 supprimer certaines erreurs de rendu, à vérifier
-- **`--bind 0.0.0.0`** : écouter les requêtes quelque soit leur origine
-- **`--baseURL [BASEURL]`** : spécifier quelle est l'adresse du site, pour cela
+- __`--bind 0.0.0.0`__ : écouter les requêtes quelque soit leur origine
+- __`--baseURL [BASEURL]`__ : spécifier quelle est l'adresse du site, pour cela
 il faut remplacer `[BASEURL]` par une [URL] de la forme `http://[IP]:1313`, où
 `[IP]` correspond l'[adresse IP] du serveur sur le réseau local. Exemple :
 `http://192.168.1.14:1313`
