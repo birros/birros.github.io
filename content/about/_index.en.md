@@ -42,7 +42,7 @@ and politics. Free thinker by conviction, no taboo or obscurantism frightens me.
 
 - __Email__ : [birros@protonmail.com]
 - __GitHub__ : [birros]
-- __Mastodon__ : [birros@framapiaf.org]
+- __Mastodon__ : [birros@mamot.fr]
 - __IRC__ : I am often on channel #birros on the [Freenode] network under the
 pseudonym @birros
 
@@ -59,4 +59,4 @@ pseudonym @birros
 [birros@protonmail.com]: mailto:birros@protonmail.com
 [birros]: https://github.com/birros
 [Freenode]: https://freenode.net/
-[birros@framapiaf.org]: https://framapiaf.org/@birros
+[birros@mamot.fr]: https://mamot.fr/@birros

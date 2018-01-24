@@ -45,7 +45,7 @@ obscurantisme ne me fait peur.
 
 - __Courriel__ : [birros@protonmail.com]
 - __GitHub__ : [birros]
-- __Mastodon__ : [birros@framapiaf.org]
+- __Mastodon__ : [birros@mamot.fr]
 - __IRC__ : Je suis souvent sur le canal #birros sur le réseau [Freenode (en)]
 sous le pseudonyme @birros
 
@@ -62,4 +62,4 @@ sous le pseudonyme @birros
 [birros@protonmail.com]: mailto:birros@protonmail.com
 [birros]: https://github.com/birros
 [Freenode (en)]: https://freenode.net/
-[birros@framapiaf.org]: https://framapiaf.org/@birros
+[birros@mamot.fr]: https://mamot.fr/@birros
