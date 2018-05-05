@@ -1,16 +1,20 @@
 baseURL = "https://birros.github.io/"
-theme = "ananke"
-DefaultContentLanguage = "en"
+theme = "hugo-bootstrap"
+title = "Birros"
+DefaultContentLanguage = "fr"
+
+paginate = 3
+paginatePath = "page"
 
 [params]
-background_color_class = "bg-mid-gray"
-featured_image = false
 mainSections = [ "journal" ]
+author = "Birros"
+date_format = "2006-01-02"
 
 [Languages.en]
-title = "Birros"
+languageName = "English"
 copyright = "This content is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
 
 [Languages.fr]
-title = "Birros"
+languageName = "Français"
 copyright = "Ce contenu est sous licence Creative Commons Attribution-ShareAlike 4.0 International License."

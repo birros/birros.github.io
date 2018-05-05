@@ -1,6 +1,5 @@
 ---
 title: À propos
-featured_image: images/camille-orgel-58391.jpg
 menu:
   main:
     weight: -7

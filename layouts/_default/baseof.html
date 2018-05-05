@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{ partial "head-meta" . }}
+
+    <link rel="canonical" href="{{ .Permalink }}">
+    <link rel="icon" href="{{ .Site.BaseURL }}favicon.ico" />
+
+    <title>
+      {{ block "title" . }}
+        {{ .Title}}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}
+      {{ end }}
+    </title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}vendor/css/bootstrap-4.0.0.min.css">
+
+    <link href="{{ .Site.BaseURL }}css/style.css" rel="stylesheet">
+
+    {{ if .RSSLink }}
+    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    {{ end }}
+
+    {{ template "_internal/google_analytics_async.html" . }}
+
+    {{ partial "head-custom.html" . }}
+  </head>
+  <body>
+    {{ block "header" . }}
+      {{ partial "header" . }}
+    {{ end }}
+
+    {{ block "body" . }}
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-8 blog-main">
+
+          {{ block "main" . }}
+          {{ end }}
+
+        </div>
+
+        {{ partial "sidebar.html" . }}
+
+      </div>
+    </div>
+    {{ end }}
+
+    {{ block "footer" . }}
+      {{ partial "footer" . }}
+    {{ end }}
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{{ .Site.BaseURL }}vendor/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="{{ .Site.BaseURL }}vendor/js/popper-1.12.9-umd.min.js"></script>
+    <script src="{{ .Site.BaseURL }}vendor/js/bootstrap-4.0.0.min.js"></script>
+  </body>
+</html>
