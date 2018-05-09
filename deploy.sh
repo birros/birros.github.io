@@ -14,8 +14,10 @@ fi
 
 # Cleanup & pull the master branch
 cd public
-git clean -xdf
-git pull
+git clean -xdf # remove untracked files
+git checkout . # cleanup repo
+git pull       # update repo
+rm -r *        # remove all files to prevent publishing removed content
 cd ..
 
 
