@@ -1,28 +1,39 @@
 #!/bin/bash
 
 #
-# This script comes from : https://gohugo.io/hosting-and-deployment/hosting-on-github/
+# This script is inspired by:
+#   https://gohugo.io/hosting-and-deployment/hosting-on-github/
 #
 
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
-# Build the project.
-hugo # if using a theme, replace with `hugo -t <YOURTHEME>`
+# Clone the master branch to public if public doesn't exist
+if [ ! -d public ] ; then
+    git clone -b master git@github.com:birros/birros.github.io.git public
+fi
 
-# Go To Public folder
+# Cleanup & pull the master branch
 cd public
-# Add changes to git.
+git clean -xdf
+git pull
+cd ..
+
+
+# Build the website
+hugo
+
+
+# Go to public folder & add commits
+cd public
 git add .
 
-# Commit changes.
+# Commit changes
 msg="rebuilding site `date`"
 if [ $# -eq 1 ]
-  then msg="$1"
+    then msg="$1"
 fi
 git commit -m "$msg"
 
-# Push source and build repos.
+# Push commits and go back to root
 git push origin master
-
-# Come Back up to the Project Root
 cd ..
