@@ -1,0 +1,47 @@
+<!--
+
+  CSS:
+
+    .viz-svg {
+      margin: auto;
+      display: block;
+      max-width: 100%;
+    }
+
+  Example:
+
+    ```viz-dot
+    graph graphname {
+      a [label="Foo"];
+      b [shape=box];
+      a -- b -- c [color=blue];
+      b -- d [style=dotted];
+    }
+    ```
+
+-->
+
+<script type="text/javascript">
+  function _viz_onload () {
+    var vizPrefix = "language-viz-";
+    var nodes = document.querySelectorAll("[class^=" + vizPrefix + "]");
+
+    Array.prototype.forEach.call(nodes, function(x) {
+      var engine;
+      x.getAttribute("class").split(" ").forEach(function(cls) {
+        if (cls.startsWith(vizPrefix)) {
+          engine = cls.substr(vizPrefix.length);
+        }
+      });
+
+      var svg = Viz(x.innerText, {format: "svg", engine: engine});
+      var image = new DOMParser().parseFromString(svg, "image/svg+xml");
+      image.documentElement.classList.add ("viz-svg");
+
+      x.parentNode.insertBefore(image.documentElement, x);
+      x.style.display = 'none';
+      x.parentNode.style.backgroundColor = "white";
+    });
+  }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/1.8.2/viz-lite.js" integrity="sha384-7I9CqnucKexw7RtAdviz5UzxKS2JQk7Ntdwol3AhvZ+eOPeR3mRmNPkETnm2HWy/" crossorigin="anonymous" async onload="_viz_onload()"></script>
