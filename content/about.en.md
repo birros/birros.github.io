@@ -7,8 +7,8 @@ menu:
 
 ## Editorial line
 
-Being natively French-speaking, the pages are first written in French before
-being translated by me in English.
+Being natively French-speaking the pages are written in French, English
+translation is possible if I find it useful or if a request exists.
 
 This site serves as a showcase for __my creations__ as well as __my favorites__
 concerning *projects*, *ideas*, *wishes*, *methods*, *tips*, *tutorials*,
@@ -26,12 +26,12 @@ to you please contact me directly.
 ## Technology
 
 All pages on this site are produced using the [Hugo] static site generator and
-the [Ananke] theme. The sources and the site are hosted on [GitHub].
+the [Hugo Bootstrap] theme. The sources and the site are hosted on [GitHub].
 
 ## Credits and Licenses
 
-All the featured images are from [Unsplash]. All content and codes presented on
-the site are published under [CC-BY-SA] and [GPL-3.0] licenses.
+All content and codes presented on the site are published under [CC-BY-SA] and
+[GPL-3.0] licenses.
 
 ## Author
 
@@ -46,11 +46,10 @@ and politics. Free thinker by conviction, no taboo or obscurantism frightens me.
 
 [open a ticket]: https://github.com/birros/birros.github.io-sources/issues
 [propose changes]: https://github.com/birros/birros.github.io-sources/pulls
-[Hugo]: https://gohugo.io/
-[Ananke]: https://github.com/budparr/gohugo-theme-ananke
-[GitHub]: https://github.com/
+[Hugo]: https://en.wikipedia.org/wiki/Hugo_(software)
+[Hugo Bootstrap]: https://github.com/Xzya/hugo-bootstrap
+[GitHub]: https://en.wikipedia.org/wiki/GitHub
 [GPL-3.0]: https://www.gnu.org/licenses/gpl-3.0.html
 [CC-BY-SA]: https://creativecommons.org/licenses/by-sa/4.0/
-[Unsplash]: https://unsplash.com/
 [birros@protonmail.com]: mailto:birros@protonmail.com
 [birros]: https://github.com/birros
