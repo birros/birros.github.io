@@ -22,7 +22,8 @@ cd ..
 
 
 # Build the website
-hugo
+USE_VIZPACK=true hugo && ./scripts/hugo-vizpack.sh
+# hugo
 
 
 # Go to public folder & add commits

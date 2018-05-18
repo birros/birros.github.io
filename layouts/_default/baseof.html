@@ -63,7 +63,9 @@
     {{ if .Params.math }}
       {{ partial "katex_support_script.html" . }}
     {{ end }}
-    {{ if .Params.viz }}
+
+    {{ $useVizpack := eq (getenv "USE_VIZPACK") "true" }}
+    {{ if and .Params.viz (not $useVizpack) }}
       {{ partial "graphviz_support.html" . }}
     {{ end }}
   </body>

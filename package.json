@@ -1,0 +1,14 @@
+{
+  "name": "birros.github.io",
+  "version": "1.0.0",
+  "description": "Personnal website",
+  "dependencies": {
+    "vizpack": "^0.0.2"
+  },
+  "scripts": {
+    "start": "./scripts/start.sh",
+    "deploy": "./scripts/deploy.sh"
+  },
+  "author": "Birros <birros@protonmail.com>",
+  "license": "GPL-3.0"
+}
