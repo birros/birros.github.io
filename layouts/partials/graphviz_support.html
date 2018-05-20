@@ -22,7 +22,15 @@
 -->
 
 <script type="text/javascript">
-  function _viz_onload () {
+  var count = 0;
+  function vizOnload () {
+    count++;
+    if (count == 2) {
+      vizRender();
+    }
+  }
+
+  function vizRender () {
     var vizPrefix = "language-viz-";
     var nodes = document.querySelectorAll("[class^=" + vizPrefix + "]");
 
@@ -34,14 +42,16 @@
         }
       });
 
-      var svg = Viz(x.innerText, {format: "svg", engine: engine});
-      var image = new DOMParser().parseFromString(svg, "image/svg+xml");
-      image.documentElement.classList.add ("viz-svg");
+      var viz = new Viz();
+      var options = {format: "svg", engine: engine};
+      viz.renderSVGElement(x.innerText, options).then(function(image) {
+        image.classList.add ("viz-svg");
 
-      x.parentNode.insertBefore(image.documentElement, x);
-      x.style.display = 'none';
-      x.parentNode.style.backgroundColor = "white";
+        x.parentNode.insertBefore(image, x);
+        x.style.display = 'none';
+      });
     });
   }
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/1.8.2/viz-lite.js" integrity="sha384-7I9CqnucKexw7RtAdviz5UzxKS2JQk7Ntdwol3AhvZ+eOPeR3mRmNPkETnm2HWy/" crossorigin="anonymous" async onload="_viz_onload()"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/2.0.0/viz.js" integrity="sha384-Dk3XgZBvGqpMdsJAJ1jmBHrULzDJvZt1FSpbZhGjNKh4zPm3UCNxfZthCN6fEcbF" crossorigin="anonymous" async onload="vizOnload()"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/2.0.0/full.render.js" integrity="sha384-y+ikphc9GOKEGwqOidYHafDmcpXNpHmdIxnw0/usBkmfFbY0xdT2LYNdl4TRlHoI" crossorigin="anonymous" async onload="vizOnload()"></script>
