@@ -2,10 +2,6 @@
 title: "Cartographie et navigation hors ligne sur GNU/Linux"
 date: 2018-06-06T09:45:00+01:00
 type: post
-draft: true
-
-# Activation du rendu Graphviz
-viz: true
 ---
 
 Appréciant l'usage d'applications de cartographie et de navigation hors ligne
