@@ -1,6 +1,6 @@
 # Personnal website
 
-This website is made with the static website generator [Hugo].
+This website is made with the static website generator [VuePress].
 
 ## Build & deploy
 
@@ -10,12 +10,8 @@ Install npm dependencies:
 
 To run a development server:
 
-    $ npm start
-
-To deploy this website on GitHub:
-
-    $ npm run deploy
+    $ npm run docs:dev
 
 <!--Links-->
 
-[Hugo]: https://gohugo.io/
+[VuePress]: https://vuepress.vuejs.org/

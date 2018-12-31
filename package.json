@@ -2,12 +2,13 @@
   "name": "birros.github.io",
   "version": "1.0.0",
   "description": "Personnal website",
-  "dependencies": {
-    "vizpack": "^0.0.2"
+  "devDependencies": {
+    "vuepress": "^1.0.0-alpha.30",
+    "vuepress-plugin-rss": "^2.0.0"
   },
   "scripts": {
-    "start": "./scripts/start.sh",
-    "deploy": "./scripts/deploy.sh"
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "author": "Birros <birros@protonmail.com>",
   "license": "GPL-3.0"
