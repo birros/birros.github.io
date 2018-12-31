@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Personnal website",
   "devDependencies": {
+    "katex": "^0.10.0",
     "vuepress": "^1.0.0-alpha.30",
     "vuepress-plugin-rss": "^2.0.0"
   },

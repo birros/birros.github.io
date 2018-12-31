@@ -6,6 +6,7 @@
 
 <script>
 import ParentLayout from '@parent-theme/layouts/Layout.vue'
+import renderMathInElement from 'katex/contrib/auto-render/auto-render';
 
 export default {
   components: {
@@ -64,7 +65,9 @@ export default {
 }
 </script>
 
-<style>
+<style lang="stylus">
+@import '../../../../node_modules/katex/dist/katex.min.css';
+
 .viz-svg {
   margin: auto;
   display: block;
