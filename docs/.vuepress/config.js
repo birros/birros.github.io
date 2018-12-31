@@ -73,15 +73,6 @@ module.exports = {
                     { text: 'Notes', link: '/notes/' },
                     { text: 'À propos', link: '/about' },
                 ],
-                notFound: {
-                    messages: [
-                        `Il n'y a rien ici.`,
-                        `Comment en sommes-nous arrivés là ?`,
-                        `C'est un Quatre-Oh-Quatre.`,
-                        `On dirait qu'on a des liens brisés.`,
-                    ],
-                    homeLink: 'Retour à l\'accueil.'
-                }
             },
             '/en/': {
                 selectText: 'Languages',
