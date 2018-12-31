@@ -35,7 +35,7 @@ export default {
   }
   & + div {
     padding-top: 0 !important;
-    *:first-child {
+    & > *:first-child {
       margin-top: 1em !important;
       padding-top: 0 !important;
     }
