@@ -48,13 +48,15 @@ export default {
             }
           });
   
-          var svg = Viz(x.innerText, {format: "svg", engine: engine});
-          var image = new DOMParser().parseFromString(svg, "image/svg+xml");
-          image.documentElement.classList.add ("viz-svg");
-  
-          x.parentNode.insertBefore(image.documentElement, x);
-          x.style.display = 'none';
-          x.parentNode.style.backgroundColor = "white";
+          var viz = new Viz();
+          const req = viz.renderSVGElement(x.innerText, {format: "svg", engine: engine})
+          req.then(svg => {
+            svg.classList.add ("viz-svg");
+      
+            x.parentNode.insertBefore(svg, x);
+            x.style.display = 'none';
+            x.parentNode.style.backgroundColor = "white";
+          })
         });
       });
     }

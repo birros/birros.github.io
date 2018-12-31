@@ -3,18 +3,18 @@ module.exports = {
         // Katex
         ['link', {
             rel: 'stylesheet',
-            href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css',
-            integrity: 'sha384-TEMocfGvRuD1rIAacqrknm5BQZ7W7uWitoih+jMNFXQIbNl16bO8OZmylH/Vi/Ei',
+            href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css',
+            integrity: 'sha256-BZ71u1P7NUocEN9mKkcAovn3q5JPm/r9xVyjWh/Kqrc=',
             crossorigin: 'anonymous',
         }],
         ['script', {
-            src: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js',
-            integrity: 'sha384-jmxIlussZWB7qCuB+PgKG1uLjjxbVVIayPJwi6cG6Zb4YKq0JIw+OMnkkEC7kYCq',
+            src: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js',
+            integrity: 'sha256-q01RVaHUJiYq9aq0FwkI6GAmMtOmRgToK8aEHHm4Xl8=',
             crossorigin: 'anonymous',
         }],
         ['script', {
-            src: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/contrib/auto-render.min.js',
-            integrity: 'sha384-IiI65aU9ZYub2MY9zhtKd1H2ps7xxf+eb2YFG9lX6uRqpXCvBTOidPRCXCrQ++Uc',
+            src: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js',
+            integrity: 'sha256-CiPSQ9n316ms9u5yYJ092wI+FeybXvesfbnOUvSRvYA=',
             crossorigin: 'anonymous',
         }],
         // Viz
@@ -37,12 +37,18 @@ module.exports = {
             }
         `],
         ['script', {
-            src: 'https://cdnjs.cloudflare.com/ajax/libs/viz.js/1.8.2/viz-lite.js',
-            integrity: 'sha384-7I9CqnucKexw7RtAdviz5UzxKS2JQk7Ntdwol3AhvZ+eOPeR3mRmNPkETnm2HWy/',
+            src: 'https://cdnjs.cloudflare.com/ajax/libs/viz.js/2.1.2/viz.js',
+            integrity: 'sha256-8RHyK+AFzq9iXwbFo2unqidwPbwHU5FFWe3RwkcVtuU=',
             crossorigin: 'anonymous',
-            async: true,
+            defer: true,
+        }],
+        ['script', {
+            src: 'https://cdnjs.cloudflare.com/ajax/libs/viz.js/2.1.2/full.render.js',
+            integrity: 'sha256-Ogqs510LFnekr9o7OLdpelaaAmNss9egQRTyzCqV2NQ=',
+            crossorigin: 'anonymous',
+            defer: true,
             onload: '_viz_onload()',
-        }]
+        }],
     ],
     locales: {
         '/': {
