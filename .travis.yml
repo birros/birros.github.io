@@ -11,7 +11,7 @@ addons:
         packages:
             - g++-4.8
 install:
-    - npm install
+    - npm ci
 script:
     - npm run docs:build
 cache:
