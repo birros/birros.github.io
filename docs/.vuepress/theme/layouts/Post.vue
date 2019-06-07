@@ -23,8 +23,10 @@ export default {
 
 <style lang="stylus">
 .post-top {
-  padding-bottom: 0 !important;
-  margin-bottom: 2em !important;
+  max-width: 740px;
+  margin: 2em auto !important;
+  padding: 2rem 2.5rem 0 2.5rem;
+
   h1 {
     margin-bottom: 0 !important;
     padding-bottom: 0.3rem !important;

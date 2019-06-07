@@ -57,6 +57,10 @@ export default {
 
 <style lang="stylus">
 .list-top {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 2rem 2.5rem;
+
   h2 {
     margin-bottom: 0;
     border: none;
@@ -64,6 +68,10 @@ export default {
 
   .infos-container {
     margin-top: 0 !important;
+  }
+
+  .posts {
+    margin-top: 3.6rem;
   }
 }
 </style>

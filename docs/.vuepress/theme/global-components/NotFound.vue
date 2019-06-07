@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import NotFound from '@vuepress/core/lib/app/components/NotFound.vue';
+import NotFound from '@vuepress/core/lib/client/components/NotFound.vue';
 
 export default {
   components: {
@@ -12,4 +12,4 @@ export default {
 }
 </script>
 
-<style src="@vuepress/theme-default/styles/theme.styl" lang="stylus"></style>
+<style src="@vuepress/theme-default/styles/index.styl" lang="stylus"></style>
