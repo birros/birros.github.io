@@ -1,6 +1,6 @@
 # Personnal website
 
-[![Build Status - Travis][]][Build status]
+[![CD_Image][]][CD_Link]
 
 This website is made with the static website generator [VuePress].
 
@@ -17,5 +17,5 @@ To run a development server:
 <!--Links-->
 
 [VuePress]: https://vuepress.vuejs.org/
-[Build Status - Travis]: https://travis-ci.org/birros/birros.github.io.svg?branch=develop
-[Build status]: https://travis-ci.org/birros/birros.github.io
+[CD_Image]: https://github.com/birros/birros.github.io/workflows/CD/badge.svg
+[CD_Link]: https://github.com/birros/birros.github.io
