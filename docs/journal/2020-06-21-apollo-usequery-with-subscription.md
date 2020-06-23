@@ -67,7 +67,7 @@ basé sur [GraphQL Codegen (en)][6]. Le [hook personnalisé][7] a pour objectif 
 garantir une exacte compatibilité avec le type de `useCounterQuery`.
 
 ```typescript
-import useEffect from 'react'
+import { useEffect } from 'react'
 import {
   useCounterQuery,
   CounterDocument,
