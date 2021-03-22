@@ -33,32 +33,30 @@ export default {
       );
     },
     renderViz() {
-      _viz_call_when_loaded(() => {
-        var vizPrefix = "language-viz-";
-        var nodes = document.querySelectorAll("[class^=" + vizPrefix + "]");
-  
-        Array.prototype.forEach.call(nodes, function(x) {
-          if(x.style.display === "none") {
-            return;
+      var vizPrefix = "language-viz-";
+      var nodes = document.querySelectorAll("[class^=" + vizPrefix + "]");
+
+      Array.prototype.forEach.call(nodes, function(x) {
+        if(x.style.display === "none") {
+          return;
+        }
+
+        var engine;
+        x.getAttribute("class").split(" ").forEach(function(cls) {
+          if (cls.startsWith(vizPrefix)) {
+            engine = cls.substr(vizPrefix.length);
           }
-  
-          var engine;
-          x.getAttribute("class").split(" ").forEach(function(cls) {
-            if (cls.startsWith(vizPrefix)) {
-              engine = cls.substr(vizPrefix.length);
-            }
-          });
-  
-          var viz = new Viz();
-          const req = viz.renderSVGElement(x.innerText, {format: "svg", engine: engine})
-          req.then(svg => {
-            svg.classList.add ("viz-svg");
-      
-            x.parentNode.insertBefore(svg, x);
-            x.style.display = 'none';
-            x.parentNode.style.backgroundColor = "white";
-          })
         });
+
+        var viz = new Viz();
+        const req = viz.renderSVGElement(x.innerText, {format: "svg", engine: engine})
+        req.then(svg => {
+          svg.classList.add ("viz-svg");
+    
+          x.parentNode.insertBefore(svg, x);
+          x.style.display = 'none';
+          x.parentNode.style.backgroundColor = "white";
+        })
       });
     }
   }

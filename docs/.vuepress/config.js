@@ -1,24 +1,5 @@
 module.exports = {
     head: [
-        // Viz
-        ['script', {}, `
-            var _viz_loaded = false;
-            var _viz_listeners = [];
-            function _viz_onload () {
-                _viz_loaded = true;
-                _viz_listeners.forEach(function(callback) {
-                    callback();
-                })
-                _viz_listeners = [];
-            }
-            function _viz_call_when_loaded(callback) {
-                if (_viz_loaded) {
-                    callback();
-                } else {
-                    _viz_listeners.push(callback);
-                }
-            }
-        `],
         ['script', {
             src: 'https://cdnjs.cloudflare.com/ajax/libs/viz.js/2.1.2/viz.js',
             integrity: 'sha256-8RHyK+AFzq9iXwbFo2unqidwPbwHU5FFWe3RwkcVtuU=',
@@ -30,7 +11,6 @@ module.exports = {
             integrity: 'sha256-Ogqs510LFnekr9o7OLdpelaaAmNss9egQRTyzCqV2NQ=',
             crossorigin: 'anonymous',
             async: true,
-            onload: '_viz_onload()',
         }],
     ],
     locales: {
