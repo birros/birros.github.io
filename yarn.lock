@@ -2357,6 +2357,11 @@ object-assign@^4.1.1:
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
   integrity sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
 
+ogl@^0.0.68:
+  version "0.0.68"
+  resolved "https://registry.yarnpkg.com/ogl/-/ogl-0.0.68.tgz#a3d201cfb920b55ec016612c18964bd026483367"
+  integrity sha512-i4LSTLehMMkZbkZEAAvEOqfu4p+0OIGR5dDRzrYLIFNmHFNEavJ54VZmB1vqjpJZtGOqMAVjPXgeJw2vsfknbQ==
+
 os-browserify@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/os-browserify/-/os-browserify-0.3.0.tgz#854373c7f5c2315914fc9bfc6bd8238fdda1ec27"

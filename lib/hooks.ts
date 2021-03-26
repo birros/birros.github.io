@@ -48,3 +48,24 @@ export const useFormatTitle = () => {
 
   return formatTitle
 }
+
+const updateViewportHeight = () => {
+  const vh = window.innerHeight * 0.01
+  document.documentElement.style.setProperty('--vh', `${vh}px`)
+}
+
+export const useSetupVH = (updateOnResize?: boolean) => {
+  useEffect(() => {
+    updateViewportHeight()
+
+    if (updateOnResize) {
+      window.addEventListener('resize', updateViewportHeight)
+    }
+
+    return () => {
+      if (updateOnResize) {
+        window.removeEventListener('resize', updateViewportHeight)
+      }
+    }
+  }, [])
+}

@@ -8,6 +8,7 @@ import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import Article, { ArticleProps } from '../../components/Article'
 import Head from 'next/head'
 import { useFormatTitle } from '../../lib/hooks'
+import ContainerizedLayout from '../../components/ContainerizedLayout'
 
 const Project: NextPage<ArticleProps> = ({ title, ...rest }) => {
   const formatTitle = useFormatTitle()
@@ -17,7 +18,9 @@ const Project: NextPage<ArticleProps> = ({ title, ...rest }) => {
       <Head>
         <title>{formatTitle(title)}</title>
       </Head>
-      <Article title={title} {...rest} />
+      <ContainerizedLayout>
+        <Article title={title} {...rest} />
+      </ContainerizedLayout>
     </>
   )
 }

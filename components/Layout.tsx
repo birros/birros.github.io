@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 import Header from './Header'
 import Head from 'next/head'
 
@@ -25,9 +25,9 @@ const Layout: React.FC = ({ children }) => (
       top="0"
       zIndex="2"
     />
-    <Container as="main" maxW="container.md" mt="14" py="4">
+    <Box as="main" pt="14">
       {children}
-    </Container>
+    </Box>
   </>
 )
 

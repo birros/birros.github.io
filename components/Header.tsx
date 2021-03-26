@@ -5,7 +5,7 @@ import Nav from './Nav'
 import NextImage from 'next/image'
 
 const Header: React.FC<FlexProps> = (props) => (
-  <Flex as="header" backgroundColor="white" {...props}>
+  <Flex as="header" backgroundColor="white" {...props} minH="14">
     <Flex as="span" alignItems="center" justifyContent="center" p="1">
       <NextLink href="/" passHref>
         <Link

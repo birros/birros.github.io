@@ -5,6 +5,7 @@ import sortByDate from '../../lib/sortByDate'
 import Summaries, { SummariesProps } from '../../components/Summaries'
 import Head from 'next/head'
 import { useFormatTitle, useTranslate } from '../../lib/hooks'
+import ContainerizedLayout from '../../components/ContainerizedLayout'
 
 const Projects: NextPage<SummariesProps> = (props) => {
   const _ = useTranslate()
@@ -15,7 +16,9 @@ const Projects: NextPage<SummariesProps> = (props) => {
       <Head>
         <title>{formatTitle(_('nav.projects'))}</title>
       </Head>
-      <Summaries {...props} />
+      <ContainerizedLayout>
+        <Summaries {...props} />
+      </ContainerizedLayout>
     </>
   )
 }

@@ -5,6 +5,7 @@ import sortByDate from '../../lib/sortByDate'
 import Summaries, { SummariesProps } from '../../components/Summaries'
 import { useFormatTitle, useTranslate } from '../../lib/hooks'
 import Head from 'next/head'
+import ContainerizedLayout from '../../components/ContainerizedLayout'
 
 const Journal: NextPage<SummariesProps> = (props) => {
   const _ = useTranslate()
@@ -15,7 +16,9 @@ const Journal: NextPage<SummariesProps> = (props) => {
       <Head>
         <title>{formatTitle(_('nav.journal'))}</title>
       </Head>
-      <Summaries {...props} />
+      <ContainerizedLayout>
+        <Summaries {...props} />
+      </ContainerizedLayout>
     </>
   )
 }

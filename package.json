@@ -24,6 +24,7 @@
     "gray-matter": "^4.0.2",
     "next": "^10.0.9",
     "next-plugin-preact": "^3.0.3",
+    "ogl": "^0.0.68",
     "preact": "^10.5.13",
     "preact-render-to-string": "^5.1.16",
     "prism-react-renderer": "^1.2.0",
