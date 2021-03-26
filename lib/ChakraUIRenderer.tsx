@@ -110,17 +110,15 @@ export const defaults: DefaultsType = {
           className={className}
           style={style}
         >
-          {tokens.map((line, i) => (
-            <Box
-              as="div"
-              whiteSpace="nowrap"
-              {...getLineProps({ line, key: i })}
-            >
-              {line.map((token, key) => (
-                <span {...getTokenProps({ token, key })} />
-              ))}
-            </Box>
-          ))}
+          <Box as="code" display="block">
+            {tokens.map((line, i) => (
+              <Box as="div" {...getLineProps({ line, key: i })}>
+                {line.map((token, key) => (
+                  <span {...getTokenProps({ token, key })} />
+                ))}
+              </Box>
+            ))}
+          </Box>
         </Box>
       )}
     </Highlight>
