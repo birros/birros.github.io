@@ -42,7 +42,7 @@ const Nav: React.FC<FlexProps> = (props) => {
           <Box as="li" display="inline-block" key={href}>
             <NextLink href={href} passHref>
               <Link
-                py="3"
+                py="2"
                 px="3"
                 color="gray.700"
                 display="inline-block"
@@ -61,7 +61,7 @@ const Nav: React.FC<FlexProps> = (props) => {
               color="gray.700"
               fontWeight="medium"
             >
-              <Flex as="span" py="3" px="3" alignItems="center">
+              <Flex as="span" py="2" px="3" alignItems="center">
                 <Icon as={MdTranslate} mr="1" />
                 <ChevronDownIcon style={{ marginTop: 2 }} />
               </Flex>

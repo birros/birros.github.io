@@ -6,7 +6,7 @@ const locales = {
     'infos.authorInter': ' par ',
     'infos.authorSingle': 'Par ',
     'summary.more': 'Lire la suite',
-    'welcome.title': 'Bienvenue',
+    'default.title': 'Julien Muret • Développeur Front-end',
   },
   en: {
     'nav.journal': 'Journal',
@@ -15,7 +15,7 @@ const locales = {
     'infos.authorInter': ' by ',
     'infos.authorSingle': 'By ',
     'summary.more': 'Read more',
-    'welcome.title': 'Welcome',
+    'default.title': 'Julien Muret • Front-end Developer',
   },
 }
 

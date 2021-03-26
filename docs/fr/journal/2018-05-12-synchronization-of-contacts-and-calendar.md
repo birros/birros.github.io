@@ -1,7 +1,7 @@
 ---
 title: Synchronisation des contacts et de l'agenda
 date: 2018-05-12T17:15:00+01:00
-author: Birros <birros@protonmail.com>
+author: Julien Muret <contact@julienmuret.fr>
 layout: Post
 ---
 

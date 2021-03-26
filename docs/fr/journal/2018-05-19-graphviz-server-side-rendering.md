@@ -1,7 +1,7 @@
 ---
 title: "Graphviz: Rendu côté serveur"
 date: 2018-05-19T23:07:00+01:00
-author: Birros <birros@protonmail.com>
+author: Julien Muret <contact@julienmuret.fr>
 layout: Post
 ---
 

@@ -4,11 +4,11 @@ import { GetStaticProps, NextPage } from 'next'
 import sortByDate from '../../lib/sortByDate'
 import Summaries, { SummariesProps } from '../../components/Summaries'
 import Head from 'next/head'
-import { useTranslate } from '../../lib/hooks'
-import formatTitle from '../../lib/formatTitle'
+import { useFormatTitle, useTranslate } from '../../lib/hooks'
 
 const Projects: NextPage<SummariesProps> = (props) => {
   const _ = useTranslate()
+  const formatTitle = useFormatTitle()
 
   return (
     <>

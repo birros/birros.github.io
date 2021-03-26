@@ -14,7 +14,7 @@ const Article: React.FC<ArticleProps> = ({ title, content, author, date }) => (
       <Heading as="h1">{title}</Heading>
       <Infos date={date} author={author} mt="2" />
     </Box>
-    <Box as="div" mt={8}>
+    <Box as="div" mt={3}>
       <ReactMarkdown
         renderers={ChakraUIRenderer()}
         plugins={[gfm]}

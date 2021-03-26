@@ -1,7 +1,7 @@
 ---
 title: "Apollo : useQuery avec subscription"
 date: 2020-06-21T15:00:00+01:00
-author: Birros <birros@protonmail.com>
+author: Julien Muret <contact@julienmuret.fr>
 layout: Post
 ---
 

@@ -29,9 +29,7 @@ const Infos: React.FC<Props & ChakraProps> = ({ date, author, ...rest }) => {
             {date ? _('infos.authorInter') : _('infos.authorSingle')}
           </Text>
           <NextLink href={`mailto:${author.email}`} passHref>
-            <Link rel="author" color="green.500">
-              {author.username}
-            </Link>
+            <Link rel="author">{author.username}</Link>
           </NextLink>
         </>
       )}

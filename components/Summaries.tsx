@@ -1,7 +1,7 @@
 import React from 'react'
 import NextLink from 'next/link'
 import { ApiProps } from '../lib/api'
-import { Box, Heading, Link, LinkBox, LinkOverlay } from '@chakra-ui/react'
+import { Box, Heading, Link } from '@chakra-ui/react'
 import Infos from './Infos'
 import ReactMarkdown from 'react-markdown'
 import gfm from 'remark-gfm'
@@ -32,7 +32,7 @@ const Summaries: React.FC<SummariesProps> = ({ base, items }) => {
             : {})}
         >
           <Box as="header">
-            <Heading as="h2" size="lg" color="green.500">
+            <Heading as="h2" size="lg">
               <NextLink href={`${base}/${slug}`} passHref>
                 <Link>{title}</Link>
               </NextLink>
@@ -40,7 +40,7 @@ const Summaries: React.FC<SummariesProps> = ({ base, items }) => {
             <Infos date={date} author={author} mt="1" />
           </Box>
           {summary && (
-            <LinkBox as="div" mt={3}>
+            <Box as="div" mt={3}>
               <ReactMarkdown
                 renderers={ChakraUIRenderer()}
                 plugins={[gfm]}
@@ -48,9 +48,9 @@ const Summaries: React.FC<SummariesProps> = ({ base, items }) => {
                 escapeHtml={false}
               />
               <NextLink href={`${base}/${slug}`} passHref>
-                <LinkOverlay color="green.500">{_('summary.more')}</LinkOverlay>
+                <Link>{_('summary.more')}</Link>
               </NextLink>
-            </LinkBox>
+            </Box>
           )}
         </Box>
       ))}

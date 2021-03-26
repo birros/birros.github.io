@@ -1,7 +1,7 @@
 ---
 title: "Site : Passage de Hugo à VuePress"
 date: 2018-12-31T22:30:00+01:00
-author: Birros <birros@protonmail.com>
+author: Julien Muret <contact@julienmuret.fr>
 layout: Post
 ---
 

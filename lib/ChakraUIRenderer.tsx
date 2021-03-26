@@ -49,7 +49,7 @@ type DefaultsType = {
 
 const LinkRenderer: React.FC<{ href?: string }> = ({ href, ...rest }) => (
   <NextLink href={href ?? ''} passHref>
-    <Link {...rest} color="green.500" />
+    <Link {...rest} />
   </NextLink>
 )
 

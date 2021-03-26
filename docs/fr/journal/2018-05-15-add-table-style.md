@@ -1,7 +1,7 @@
 ---
 title: Ajout du style des tableaux
 date: 2018-05-15T17:54:00+01:00
-author: Birros <birros@protonmail.com>
+author: Julien Muret <contact@julienmuret.fr>
 layout: Post
 ---
 

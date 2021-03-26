@@ -1,7 +1,7 @@
 ---
 title: Mise à jour du site
 date: 2018-05-09T16:00:00+01:00
-author: Birros <birros@protonmail.com>
+author: Julien Muret <contact@julienmuret.fr>
 layout: Post
 ---
 

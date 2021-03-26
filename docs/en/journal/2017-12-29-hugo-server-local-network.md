@@ -1,7 +1,7 @@
 ---
 title: "Hugo : server and local network"
 date: 2017-12-29T00:00:00+01:00
-author: Birros <birros@protonmail.com>
+author: Julien Muret <contact@julienmuret.fr>
 layout: Post
 ---
 

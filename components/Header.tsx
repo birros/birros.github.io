@@ -2,16 +2,33 @@ import React from 'react'
 import { Link, Flex, Spacer, FlexProps } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import Nav from './Nav'
+import NextImage from 'next/image'
 
 const Header: React.FC<FlexProps> = (props) => (
-  <Flex as="header" backgroundColor="white" px={{ base: 0, sm: 1 }} {...props}>
-    <NextLink href="/" passHref>
-      <Link fontSize="xl" fontWeight="semibold" py="3" px="5" color="gray.700">
-        Birros
-      </Link>
-    </NextLink>
+  <Flex as="header" backgroundColor="white" {...props}>
+    <Flex as="span" alignItems="center" justifyContent="center" p="1">
+      <NextLink href="/" passHref>
+        <Link
+          fontSize="lg"
+          fontWeight="semibold"
+          py="2"
+          px="3"
+          color="gray.700"
+          alignItems="center"
+          justifyContent="center"
+          display="inline-flex"
+        >
+          <NextImage
+            src="/favicon.svg"
+            height={30}
+            width={30}
+            alt="Julien Muret"
+          />
+        </Link>
+      </NextLink>
+    </Flex>
     <Spacer />
-    <Nav overflow="auto" px="2" />
+    <Nav overflow="auto" p="1" />
   </Flex>
 )
 

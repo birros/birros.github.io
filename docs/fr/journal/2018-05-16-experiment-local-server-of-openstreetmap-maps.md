@@ -1,7 +1,7 @@
 ---
 title: "Expérimentation: Serveur local de cartes OpenStreetMap"
 date: 2018-05-16T22:07:00+01:00
-author: Birros <birros@protonmail.com>
+author: Julien Muret <contact@julienmuret.fr>
 layout: Post
 ---
 

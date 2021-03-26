@@ -1,7 +1,7 @@
 ---
 title: Why choose hugo for my static website
 date: 2017-12-29T00:00:00+01:00
-author: Birros <birros@protonmail.com>
+author: BJulien Muret <contact@julienmuret.fr>
 layout: Post
 ---
 

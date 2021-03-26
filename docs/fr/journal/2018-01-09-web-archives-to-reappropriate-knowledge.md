@@ -1,7 +1,7 @@
 ---
 title: "WebArchives : Se réapproprier les connaissances"
 date: 2018-01-09T23:30:00+01:00
-author: Birros <birros@protonmail.com>
+author: Julien Muret <contact@julienmuret.fr>
 layout: Post
 ---
 

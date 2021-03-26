@@ -5,7 +5,6 @@ import sortByDate from '../lib/sortByDate'
 import Summaries, { SummariesProps } from '../components/Summaries'
 import Head from 'next/head'
 import { useTranslate } from '../lib/hooks'
-import formatTitle from '../lib/formatTitle'
 
 const Index: NextPage<SummariesProps> = (props) => {
   const _ = useTranslate()
@@ -13,7 +12,7 @@ const Index: NextPage<SummariesProps> = (props) => {
   return (
     <>
       <Head>
-        <title>{formatTitle(_('welcome.title'))}</title>
+        <title>{_('default.title')}</title>
       </Head>
       <Summaries {...props} />
     </>

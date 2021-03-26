@@ -7,16 +7,20 @@ import {
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import Article, { ArticleProps } from '../../components/Article'
 import Head from 'next/head'
-import formatTitle from '../../lib/formatTitle'
+import { useFormatTitle } from '../../lib/hooks'
 
-const Project: NextPage<ArticleProps> = ({ title, ...rest }) => (
-  <>
-    <Head>
-      <title>{formatTitle(title)}</title>
-    </Head>
-    <Article title={title} {...rest} />
-  </>
-)
+const Project: NextPage<ArticleProps> = ({ title, ...rest }) => {
+  const formatTitle = useFormatTitle()
+
+  return (
+    <>
+      <Head>
+        <title>{formatTitle(title)}</title>
+      </Head>
+      <Article title={title} {...rest} />
+    </>
+  )
+}
 
 export const getStaticProps: GetStaticProps<ArticleProps, ApiQuery> = async ({
   params,

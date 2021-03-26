@@ -33,3 +33,18 @@ export const useTranslate = () => {
 
   return _
 }
+
+export const useFormatTitle = () => {
+  const _ = useTranslate()
+
+  const formatTitle = useCallback(
+    (title?: string | null) => {
+      const defaultTitle = _('default.title')
+
+      return title ? `${title} • ${defaultTitle}` : defaultTitle
+    },
+    [_]
+  )
+
+  return formatTitle
+}
