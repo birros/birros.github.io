@@ -10,11 +10,12 @@ import {
   Image,
   OrderedList,
   UnorderedList,
+  Box,
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import NextImage from 'next/image'
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { okaidia } from 'react-syntax-highlighter/dist/cjs/styles/prism'
+import Highlight, { defaultProps, Language } from 'prism-react-renderer'
+import theme from 'prism-react-renderer/themes/okaidia'
 
 type PropsType = {
   children?: React.ReactNode
@@ -94,7 +95,31 @@ export const defaults: DefaultsType = {
     return <Code p={2}>{children}</Code>
   },
   code: ({ language, value }) => (
-    <SyntaxHighlighter style={okaidia} language={language} children={value} />
+    <Highlight
+      {...defaultProps}
+      theme={theme}
+      code={value}
+      language={language as Language}
+    >
+      {({ className, style, tokens, getLineProps, getTokenProps }) => (
+        <Box
+          as="pre"
+          p="4"
+          borderRadius="md"
+          overflow="auto"
+          className={className}
+          style={style}
+        >
+          {tokens.map((line, i) => (
+            <div {...getLineProps({ line, key: i })}>
+              {line.map((token, key) => (
+                <span {...getTokenProps({ token, key })} />
+              ))}
+            </div>
+          ))}
+        </Box>
+      )}
+    </Highlight>
   ),
   delete: (props) => {
     const { children } = props
