@@ -94,8 +94,8 @@ const getDataBySlug = (type: string, slug: string, locale?: string) => {
   const title = titleRaw ? titleRaw : null
 
   const content = contentRaw
-    .replaceAll('../../../public', '')
-    .replaceAll('../projects', '/projects')
+    .replace(/\.\.\/\.\.\/\.\.\/public/g, '')
+    .replace(/\.\.\/projects/g, '/projects')
 
   const summary = getSummary(content)
 
