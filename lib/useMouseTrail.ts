@@ -7,6 +7,8 @@ import { useEffect, useRef } from 'react'
 // @ts-ignore
 import { Renderer, Transform, Vec3, Color, Polyline } from 'ogl/src/index.mjs'
 import { theme as defaultTheme } from '@chakra-ui/react'
+import isMobileOrTablet from './isMobileOrTablet'
+import isReducedMotionPrefered from './isReducedMotionPrefered'
 
 const vertex = `
    precision highp float;
@@ -91,6 +93,14 @@ const useMouseTrail = () => {
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    if (isMobileOrTablet()) {
+      return
+    }
+
+    if (isReducedMotionPrefered()) {
+      return
+    }
+
     if (!ref.current) {
       return
     }

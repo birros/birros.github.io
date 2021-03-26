@@ -2,6 +2,7 @@ import React from 'react'
 import { Box } from '@chakra-ui/react'
 import Header from './Header'
 import Head from 'next/head'
+import Footer from './Footer'
 
 const Layout: React.FC = ({ children }) => (
   <>
@@ -25,9 +26,10 @@ const Layout: React.FC = ({ children }) => (
       top="0"
       zIndex="2"
     />
-    <Box as="main" pt="14">
+    <Box as="main" pt="14" minHeight="calc(var(--vh, 1vh) * 100)">
       {children}
     </Box>
+    <Footer />
   </>
 )
 

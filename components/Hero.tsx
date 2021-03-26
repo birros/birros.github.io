@@ -1,7 +1,8 @@
 import React from 'react'
-import { Box, Button, Flex, FlexProps, Heading } from '@chakra-ui/react'
+import { Box, Flex, FlexProps, Heading } from '@chakra-ui/react'
 import NextImage from 'next/image'
 import useMouseTrail from '../lib/useMouseTrail'
+import ContactButton from './ContactButton'
 
 const Hero: React.FC<FlexProps> = (props) => {
   const ref = useMouseTrail()
@@ -51,9 +52,7 @@ const Hero: React.FC<FlexProps> = (props) => {
             height="200"
           />
         </Box>
-        <Button colorScheme="primary" mt="4" borderRadius="full" size="lg">
-          Contactez-moi
-        </Button>
+        <ContactButton mt="4" />
       </Flex>
     </Flex>
   )
