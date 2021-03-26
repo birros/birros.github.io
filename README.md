@@ -1,21 +1,21 @@
 # Personnal website
 
-[![CD_Image][]][CD_Link]
+This website is made with [Next.js].
 
-This website is made with the static website generator [VuePress].
-
-## Build & deploy
+## Setup & develop
 
 Install npm dependencies:
 
-    $ npm install
+```shell
+$ yarn
+```
 
 To run a development server:
 
-    $ npm run docs:dev
+```shell
+$ yarn dev
+```
 
 <!--Links-->
 
-[VuePress]: https://vuepress.vuejs.org/
-[CD_Image]: https://github.com/birros/birros.github.io/workflows/CD/badge.svg
-[CD_Link]: https://github.com/birros/birros.github.io
+[Next.js]: https://nextjs.org/
