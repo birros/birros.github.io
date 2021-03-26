@@ -1,0 +1,61 @@
+import React from 'react'
+import NextLink from 'next/link'
+import { ApiProps } from '../lib/api'
+import { Box, Heading, Link, LinkBox, LinkOverlay } from '@chakra-ui/react'
+import Infos from './Infos'
+import ReactMarkdown from 'react-markdown'
+import gfm from 'remark-gfm'
+import ChakraUIRenderer from '../lib/ChakraUIRenderer'
+import { useTranslate } from '../lib/hooks'
+
+export interface SummariesProps {
+  items: Omit<ApiProps, 'content'>[]
+  base: string
+}
+
+const Summaries: React.FC<SummariesProps> = ({ base, items }) => {
+  const _ = useTranslate()
+
+  return (
+    <>
+      {items.map(({ slug, title, date, author, summary }, index) => (
+        <Box
+          as="article"
+          key={slug}
+          {...(index < items.length - 1
+            ? {
+                borderBottom: '1px',
+                borderBottomColor: 'gray.200',
+                pb: '4',
+                mb: '4',
+              }
+            : {})}
+        >
+          <Box as="header">
+            <Heading as="h2" size="lg" color="green.500">
+              <NextLink href={`${base}/${slug}`} passHref>
+                <Link>{title}</Link>
+              </NextLink>
+            </Heading>
+            <Infos date={date} author={author} mt="1" />
+          </Box>
+          {summary && (
+            <LinkBox as="div" mt={3}>
+              <ReactMarkdown
+                renderers={ChakraUIRenderer()}
+                plugins={[gfm]}
+                children={summary}
+                escapeHtml={false}
+              />
+              <NextLink href={`${base}/${slug}`} passHref>
+                <LinkOverlay color="green.500">{_('summary.more')}</LinkOverlay>
+              </NextLink>
+            </LinkBox>
+          )}
+        </Box>
+      ))}
+    </>
+  )
+}
+
+export default Summaries

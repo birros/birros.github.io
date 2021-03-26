@@ -16,10 +16,10 @@ articles from large community projects such as [Wikipedia], [Wiktionary] or
 
 ## Screenshots
 
-![Screenshot of the application home page](../../projects/web-archives/home.png)
+![Screenshot of the application home page](../../../public/assets/projects/web-archives/home_850x500.png)
 *Application home page*
 
-![Screenshot of the Wikipedia page contained in the Wikipedia archive](../../projects/web-archives/web-wikipedia.png)
+![Screenshot of the Wikipedia page contained in the Wikipedia archive](../../../public/assets/projects/web-archives/web-wikipedia_850x500.png)
 *Wikipedia page contained in the Wikipedia archive*
 
 ## Features

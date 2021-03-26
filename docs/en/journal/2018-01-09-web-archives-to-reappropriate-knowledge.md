@@ -51,7 +51,7 @@ placing content and a reading system directly on the device.
 
 ## Kiwix and its web archive format
 
-![Screenshot of the Wikipedia page, contained in the Wikipedia archive, displayed in Kiwix](../../journal/2018-01-09-web-archives-to-reappropriate-knowledge/kiwix-wikipedia.png)
+![Screenshot of the Wikipedia page, contained in the Wikipedia archive, displayed in Kiwix](../../../public/assets/journal/2018-01-09-web-archives-to-reappropriate-knowledge/kiwix-wikipedia_1050x674.png)
 *Wikipedia page, contained in the Wikipedia archive, displayed in Kiwix*
 
 After this awerness my first reflex was to find out if __a solution already
@@ -108,7 +108,7 @@ guided me in designing the interface, which should be as simple as possible.
 
 ## The future of WebArchives
 
-![Screenshot of the Wikipedia page, contained in the Wikipedia archive, displayed in WebArchives](../../journal/2018-01-09-web-archives-to-reappropriate-knowledge/web-archives-wikipedia.png)
+![Screenshot of the Wikipedia page, contained in the Wikipedia archive, displayed in WebArchives](../../../public/assets/journal/2018-01-09-web-archives-to-reappropriate-knowledge/web-archives-wikipedia_850x500.png)
 *Wikipedia page, contained in the Wikipedia archive, displayed in WebArchives*
 
 Ideally __WebArchives should not exist__, as web archives are documents almost
@@ -163,7 +163,7 @@ content...
 
 ## Conclusion
 
-![Screenshot of the WebArchives homepage](../../journal/2018-01-09-web-archives-to-reappropriate-knowledge/web-archives-home.png)
+![Screenshot of the WebArchives homepage](../../../public/assets/journal/2018-01-09-web-archives-to-reappropriate-knowledge/web-archives-home_850x500.png)
 *WebArchives homepage*
 
 In the end, this application is especially useful to me when my Internet
@@ -240,7 +240,7 @@ project.
 [ORM]: https://en.wikipedia.org/wiki/Object-relational_mapping
 [threads]: https://en.wikipedia.org/wiki/Thread_(computing)
 [crowdsourcing]: https://en.wikipedia.org/wiki/Crowdsourcing
-[WebArchives project presentation sheet]: ../../projects/web-archives
+[WebArchives project presentation sheet]: ../projects/web-archives
 [WebArchives sources]: https://github.com/birros/web-archives
 [Link to Flathub applications including WebArchives]: https://flathub.org/apps.html
 [Kiwix website]: https://www.kiwix.org/
