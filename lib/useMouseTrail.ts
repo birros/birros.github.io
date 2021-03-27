@@ -14,7 +14,7 @@ const useMouseTrail = () => {
     }
 
     let timeout: NodeJS.Timeout
-    const cb = () => (timeout = setTimeout(setup, 1 * 1000))
+    const cb = () => (timeout = setTimeout(setup, 4 * 1000))
 
     if ('requestIdleCallback' in window) {
       // @ts-ignore
