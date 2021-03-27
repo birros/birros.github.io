@@ -6,6 +6,9 @@ import Head from 'next/head'
 import theme from '../lib/theme'
 import { useSetupVH } from '../lib/hooks'
 import isMobileOrTablet from '../lib/isMobileOrTablet'
+import setupScrollIntoViewPolyfill from '../lib/setupScrollIntoViewPolyfill'
+
+setupScrollIntoViewPolyfill()
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   useSetupVH(!isMobileOrTablet())

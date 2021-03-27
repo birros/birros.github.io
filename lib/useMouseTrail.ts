@@ -3,7 +3,7 @@
  * https://github.com/oframe/ogl/blob/eab9e72931cab5b53badf6c872216f6424fbbd25/examples/polylines.html
  */
 
-import { useEffect, useRef } from 'react'
+import { useCallback, useEffect, useRef } from 'react'
 // @ts-ignore
 import { Renderer, Transform, Vec3, Color, Polyline } from 'ogl/src/index.mjs'
 import { theme as defaultTheme } from '@chakra-ui/react'
@@ -92,7 +92,7 @@ const random = (a: number, b: number) => {
 const useMouseTrail = () => {
   const ref = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
+  const setup = useCallback(async () => {
     if (isMobileOrTablet()) {
       return
     }
@@ -228,6 +228,10 @@ const useMouseTrail = () => {
       gl.canvas.parentElement?.removeChild(gl.canvas)
     }
   }, [ref])
+
+  useEffect(() => {
+    setup()
+  }, [setup])
 
   return ref
 }
