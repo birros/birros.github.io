@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
+import requestIdleCallback, { cancelIdleCallback } from './requestIdleCallback'
 
 const useGraphViz = () => {
   const { pathname } = useRouter()
@@ -9,7 +10,7 @@ const useGraphViz = () => {
       return
     }
 
-    ;(async () => {
+    const requestObj = requestIdleCallback(async () => {
       const Viz = (await import('viz.js')).default
       // @ts-ignore
       const { Module, render } = await import('viz.js/full.render')
@@ -33,7 +34,11 @@ const useGraphViz = () => {
         el.parentElement?.insertBefore(svg, el)
         el.style.display = 'none'
       })
-    })()
+    })
+
+    return () => {
+      cancelIdleCallback(requestObj)
+    }
   }, [pathname])
 }
 

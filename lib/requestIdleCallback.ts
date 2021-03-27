@@ -3,7 +3,7 @@ const isLighthouse = () => {
     process.browser &&
     navigator &&
     navigator.userAgent &&
-    // use PageSpeed Insights screenshots to get Lighthouse userAgent
+    // https://github.com/GoogleChrome/lighthouse/blob/777bf1147fd0f6aca16ffefde1350bf6297476d4/lighthouse-core/config/constants.js#L84-L87
     /Chrome-Lighthouse/.test(navigator.userAgent)
   )
 }

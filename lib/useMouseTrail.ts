@@ -13,6 +13,7 @@ const useMouseTrail = () => {
       const setupMouseTrail = (await import('./setupMouseTrail')).default
       setupMouseTrail(ref.current)
     })
+
     return () => {
       cancelIdleCallback(requestObj)
     }

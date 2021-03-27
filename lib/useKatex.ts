@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import 'katex/dist/katex.min.css'
+import requestIdleCallback, { cancelIdleCallback } from './requestIdleCallback'
 
 const useKatex = () => {
   const { pathname } = useRouter()
@@ -10,7 +11,7 @@ const useKatex = () => {
       return
     }
 
-    ;(async () => {
+    const requestObj = requestIdleCallback(async () => {
       const renderMathInElement = (
         await import('katex/dist/contrib/auto-render')
       ).default
@@ -21,7 +22,11 @@ const useKatex = () => {
           { left: '$', right: '$', display: false },
         ],
       })
-    })()
+    })
+
+    return () => {
+      cancelIdleCallback(requestObj)
+    }
   }, [pathname])
 }
 
