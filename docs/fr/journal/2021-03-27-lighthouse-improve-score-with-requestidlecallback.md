@@ -10,6 +10,14 @@ animation sur la page d'accueil. Grâce à [requestIdleCallback][3],
 [setTimeout][4] et une [expression régulière][5] j'ai pû faire passer le score
 de 57 à 100 pour un navigateur de bureau.
 
+<!-- summary_link -->
+
+[1]: https://en.wikipedia.org/wiki/Next.js
+[2]: https://en.wikipedia.org/wiki/Google_Lighthouse
+[3]: https://developer.mozilla.org/fr/docs/Web/API/Window/requestIdleCallback
+[4]: https://developer.mozilla.org/fr/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
+[5]: https://fr.wikipedia.org/wiki/Expression_r%C3%A9guli%C3%A8re
+
 <!-- more -->
 
 ## Le problème
@@ -96,13 +104,8 @@ export const cancelIdleCallback = (obj: IdleCallbackObj) => {
 export default requestIdleCallback
 ```
 
-<!-- Liens -->
+<!-- links -->
 
-[1]: https://en.wikipedia.org/wiki/Next.js
-[2]: https://en.wikipedia.org/wiki/Google_Lighthouse
-[3]: https://developer.mozilla.org/fr/docs/Web/API/Window/requestIdleCallback
-[4]: https://developer.mozilla.org/fr/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
-[5]: https://fr.wikipedia.org/wiki/Expression_r%C3%A9guli%C3%A8re
 [6]: https://fr.reactjs.org/docs/react-dom.html#hydrate
 [7]: https://fr.wikipedia.org/wiki/Thread_(informatique)
 [8]: https://fr.wikipedia.org/wiki/Fonction_de_rappel
