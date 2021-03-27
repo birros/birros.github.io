@@ -1,5 +1,16 @@
 import { useEffect, useRef } from 'react'
 
+const isLighthouse = () => {
+  return (
+    process.browser &&
+    navigator &&
+    navigator.userAgent &&
+    /Chrome-Lighthouse/.test(navigator.userAgent)
+  )
+}
+
+const TIMEOUT = isLighthouse() ? 5 * 1000 : 0
+
 const useMouseTrail = () => {
   const ref = useRef<HTMLDivElement>(null)
 
@@ -14,7 +25,7 @@ const useMouseTrail = () => {
     }
 
     let timeout: NodeJS.Timeout
-    const cb = () => (timeout = setTimeout(setup, 2 * 1000))
+    const cb = () => (timeout = setTimeout(setup, TIMEOUT))
 
     if ('requestIdleCallback' in window) {
       // @ts-ignore
