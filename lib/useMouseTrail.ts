@@ -93,6 +93,10 @@ const useMouseTrail = () => {
   const ref = useRef<HTMLDivElement>(null)
 
   const setup = useCallback(async () => {
+    if (!process.browser) {
+      return
+    }
+
     if (isMobileOrTablet()) {
       return
     }
