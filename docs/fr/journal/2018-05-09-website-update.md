@@ -2,7 +2,6 @@
 title: Mise à jour du site
 date: 2018-05-09T16:00:00+01:00
 author: Julien Muret <contact@julienmuret.fr>
-layout: Post
 ---
 
 Petit billet pour parler des évolutions du site aussi bien en forme qu'en

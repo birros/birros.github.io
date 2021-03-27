@@ -2,7 +2,6 @@
 title: Pourquoi choisir Hugo pour mon site statique
 date: 2017-12-29T00:00:00+01:00
 author: Julien Muret <contact@julienmuret.fr>
-layout: Post
 ---
 
 Pour inaugurer le journal je souhaite expliquer les choix techniques et

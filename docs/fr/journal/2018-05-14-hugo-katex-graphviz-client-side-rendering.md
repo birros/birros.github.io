@@ -2,7 +2,6 @@
 title: "Hugo: rendu KaTex & Graphviz côté client"
 date: 2018-05-14T22:05:00+01:00
 author: Julien Muret <contact@julienmuret.fr>
-layout: Post
 ---
 
 Petit billet pour expliquer l'ajout du support des équations et des graphes au

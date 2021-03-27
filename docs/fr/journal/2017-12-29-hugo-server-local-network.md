@@ -2,7 +2,6 @@
 title: "Hugo : serveur et réseau local"
 date: 2017-12-29T00:00:00+01:00
 author: Julien Muret <contact@julienmuret.fr>
-layout: Post
 ---
 
 Parallèlement à la documentation officielle et son [tutoriel d'accueil (en)],

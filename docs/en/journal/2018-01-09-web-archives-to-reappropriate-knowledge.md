@@ -2,7 +2,6 @@
 title: "WebArchives : To reappropriate knowledge"
 date: 2018-01-09T23:30:00+01:00
 author: Julien Muret <contact@julienmuret.fr>
-layout: Post
 ---
 
 The [web] gives us easy access to knowledge. However, this progress is

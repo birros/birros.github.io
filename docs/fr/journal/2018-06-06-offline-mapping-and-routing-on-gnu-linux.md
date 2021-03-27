@@ -2,7 +2,6 @@
 title: "Cartographie et navigation hors ligne sur GNU/Linux"
 date: 2018-06-06T09:45:00+01:00
 author: Julien Muret <contact@julienmuret.fr>
-layout: Post
 ---
 
 Appréciant l'usage d'applications de cartographie et de navigation hors ligne

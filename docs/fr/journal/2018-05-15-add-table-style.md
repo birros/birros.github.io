@@ -2,7 +2,6 @@
 title: Ajout du style des tableaux
 date: 2018-05-15T17:54:00+01:00
 author: Julien Muret <contact@julienmuret.fr>
-layout: Post
 ---
 
 Petit récapitulatif de ce que j'ai fais pour styliser les tableaux du site.

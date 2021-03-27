@@ -2,7 +2,6 @@
 title: "WebArchives : Se réapproprier les connaissances"
 date: 2018-01-09T23:30:00+01:00
 author: Julien Muret <contact@julienmuret.fr>
-layout: Post
 ---
 
 Le [web] nous offre un accès facilité à la connaissance. Cependant cette

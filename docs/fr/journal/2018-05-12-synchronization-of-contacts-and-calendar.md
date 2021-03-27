@@ -2,7 +2,6 @@
 title: Synchronisation des contacts et de l'agenda
 date: 2018-05-12T17:15:00+01:00
 author: Julien Muret <contact@julienmuret.fr>
-layout: Post
 ---
 
 État des lieux sur la synchronisation de mes contacts et de mon agenda entre mon

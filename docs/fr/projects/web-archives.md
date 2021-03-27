@@ -1,6 +1,5 @@
 ---
 title: "WebArchives"
-layout: Post
 ---
 
 Un __lecteur d'archives web__ offrant la possibilité de parcourir __hors

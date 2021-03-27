@@ -1,8 +1,7 @@
 ---
 title: Why choose hugo for my static website
 date: 2017-12-29T00:00:00+01:00
-author: BJulien Muret <contact@julienmuret.fr>
-layout: Post
+author: Julien Muret <contact@julienmuret.fr>
 ---
 
 To inaugurate the journal I would like to explain the technical and

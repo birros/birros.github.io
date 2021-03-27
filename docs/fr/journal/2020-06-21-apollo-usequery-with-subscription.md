@@ -2,7 +2,6 @@
 title: "Apollo : useQuery avec subscription"
 date: 2020-06-21T15:00:00+01:00
 author: Julien Muret <contact@julienmuret.fr>
-layout: Post
 ---
 
 Petit bout de code en TypeScript montrant comment utiliser les *hooks* d'Apollo
