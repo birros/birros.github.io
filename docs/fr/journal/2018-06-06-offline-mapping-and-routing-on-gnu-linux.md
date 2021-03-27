@@ -1,5 +1,5 @@
 ---
-title: "Cartographie et navigation hors ligne sur GNU/Linux"
+title: 'Cartographie et navigation hors ligne sur GNU/Linux'
 date: 2018-06-06T09:45:00+01:00
 author: Julien Muret <contact@julienmuret.fr>
 ---
@@ -15,11 +15,12 @@ similaire au logiciel GNOME Cartes.
 
 Deux applications tirent leur épingle du jeu sur smartphone:
 
-1. __[OsmAnd][1]__: Très complète, le couteau suisse de la cartographie sur
-mobile, par contre les performances sont moins bonnes que la suivante
-2. __[Maps.me (en)][2]__: Moins complète que la précédente, cependant
-parfaitement utilisable au quotidien, ça vélocité la rend très agréable à
-utiliser
+1. **[OsmAnd][1]**: Très complète, le couteau suisse de la cartographie sur
+   mobile, par contre les performances sont moins bonnes que la suivante
+
+2. **[Maps.me (en)][2]**: Moins complète que la précédente, cependant
+   parfaitement utilisable au quotidien, ça vélocité la rend très agréable à
+   utiliser
 
 Ma première idée fut d'essayer d'exploiter les technologies développées par ces
 deux projets, mais l'absence de documentation et la non modularité des deux
@@ -30,15 +31,15 @@ applications rend leur utilisation bien difficile dans un projet tiers.
 Après avoir comparé les logicielles libres les plus performants dans le domaine
 mon choix s'est posé sur les trois suivants:
 
-- __[Mapsforge (en)][3]__: Permet de construire un petit serveur de tuiles
-__PNG__, mais peut aussi être utilisé pour faire du rendu __3D__ au moyen de son
-module [VTM (en)][6]
-- __[Graphhopper (en)][4]__: Déjà utilisé par [GNOME Cartes][7] pour effectuer
-le [routage][9] en ligne. Performances impressionnantes avec gestion de
-plusieurs profils, comme voiture, marche, vélo...
-- __[Photon (en)][5]__: Projet proche de [Nominatim (en)][10], qui lui est
-utilisé par GNOME Cartes, permettant de faire du [géocodage][8], ainsi que
-l'opération inverse — obtenir une adresse à partir de coordonnées __GPS__
+- **[Mapsforge (en)][3]**: Permet de construire un petit serveur de tuiles
+  **PNG**, mais peut aussi être utilisé pour faire du rendu **3D** au moyen de
+  son module [VTM (en)][6]
+- **[Graphhopper (en)][4]**: Déjà utilisé par [GNOME Cartes][7] pour effectuer
+  le [routage][9] en ligne. Performances impressionnantes avec gestion de
+  plusieurs profils, comme voiture, marche, vélo...
+- **[Photon (en)][5]**: Projet proche de [Nominatim (en)][10], qui lui est
+  utilisé par GNOME Cartes, permettant de faire du [géocodage][8], ainsi que
+  l'opération inverse — obtenir une adresse à partir de coordonnées **GPS**
 
 Au delà des performances appréciables de ces trois projets, l'avantage vient
 aussi des données utilisées. Tout les trois offrent la possibilité de construire
@@ -53,19 +54,19 @@ Les trois projets sont écris en [Java][13], un bon point pour la portabilité,
 par contre un gouffre en terme de consommation de mémoire vive. Il faut prévoir
 au minimum 2Go de [RAM][14] pour une région comme le Languedoc-Roussillon.
 
-Malheureusement __Mapsforge__ ne permet pas de générer des tuiles vectorielles
+Malheureusement **Mapsforge** ne permet pas de générer des tuiles vectorielles
 au format [Mapbox Vector Tile (en)][15], qui semble faire consensus dans le
-milieu de la cartographie. De plus, __Photon__ a beau être très performant ses
-résultats restent tout de même moins pertinents que ceux de __Nominatim__.
+milieu de la cartographie. De plus, **Photon** a beau être très performant ses
+résultats restent tout de même moins pertinents que ceux de **Nominatim**.
 
 Voici la taille des données utilisées par chacun des trois projets en se basant
-sur un fichier __PBF__ de 182.8Mo:
+sur un fichier **PBF** de 182.8Mo:
 
-- __Mapsforge__: 123.1Mo
-- __Graphhopper__: 141.6Mo
-- __Photon__: 243.4Mo
+- **Mapsforge**: 123.1Mo
+- **Graphhopper**: 141.6Mo
+- **Photon**: 243.4Mo
 
-L'ensemble des données, sans le fichier __PBF__ de départ, une fois compressé au
+L'ensemble des données, sans le fichier **PBF** de départ, une fois compressé au
 format [XZ][16] fait 245.8Mo.
 
 ## Expérimentation
@@ -73,8 +74,8 @@ format [XZ][16] fait 245.8Mo.
 Pour expérimenter l'utilisation en production d'un petit serveur de tuiles je me
 suis basé sur un projet reposant sur Mapsforge: [MapsforgeWeb (en)][17].
 
-Pour générer les données de __Photon__ il faut mettre en place une instance de
-__Nominatim__, pour ce faire j'ai utilisé ce projet __Docker__:
+Pour générer les données de **Photon** il faut mettre en place une instance de
+**Nominatim**, pour ce faire j'ai utilisé ce projet **Docker**:
 [NominatimDocker (en)][18].
 
 Enfin j'ai mis en place une micro page Web afin de tester tout ça:
@@ -87,15 +88,23 @@ Enfin j'ai mis en place une micro page Web afin de tester tout ça:
     <link rel="stylesheet" href="leaflet-1.3.1/leaflet.css" />
     <script src="leaflet-1.3.1/leaflet.js"></script>
 
-    <link rel="stylesheet" href="leaflet-control-geocoder-1.5.8/dist/Control.Geocoder.css" />
+    <link
+      rel="stylesheet"
+      href="leaflet-control-geocoder-1.5.8/dist/Control.Geocoder.css"
+    />
     <script src="leaflet-control-geocoder-1.5.8/dist/Control.Geocoder.js"></script>
 
-    <link rel="stylesheet" href="leaflet-routing-machine-3.2.7/dist/leaflet-routing-machine.css" />
+    <link
+      rel="stylesheet"
+      href="leaflet-routing-machine-3.2.7/dist/leaflet-routing-machine.css"
+    />
     <script src="leaflet-routing-machine-3.2.7/dist/leaflet-routing-machine.js"></script>
 
     <script src="lrm-graphhopper-1.2.0/dist/lrm-graphhopper.js"></script>
     <style>
-      html, body, #mapid {
+      html,
+      body,
+      #mapid {
         margin: 0;
         width: 100%;
         height: 100%;
@@ -105,42 +114,42 @@ Enfin j'ai mis en place une micro page Web afin de tester tout ça:
   <body>
     <div id="mapid"></div>
     <script>
-      var BBOX   = L.latLngBounds([42.221970,1.586256], [45.078210,4.947979]);
-      var center = [43.2870381, 3.4709867];
-      var zoom   = 13;
+      var BBOX = L.latLngBounds([42.22197, 1.586256], [45.07821, 4.947979])
+      var center = [43.2870381, 3.4709867]
+      var zoom = 13
       var layer = L.tileLayer('http://localhost:20480/{style}/{z}/{x}/{y}', {
         maxZoom: 18,
         minZoom: 7,
-        style: 'default'
-      });
+        style: 'default',
+      })
 
       var photonGeocoder = L.Control.Geocoder.photon({
         serviceUrl: 'http://localhost:2322/api',
         reverseUrl: 'http://localhost:2322/reverse',
         reverseQueryParams: {
-          distance_sort: true
-        }
-      });
+          distance_sort: true,
+        },
+      })
       var geocoder = L.Control.geocoder({
-        geocoder: photonGeocoder
-      });
+        geocoder: photonGeocoder,
+      })
       var router = L.Routing.control({
         router: L.Routing.graphHopper(undefined, {
-          serviceUrl: 'http://localhost:8989/route'
+          serviceUrl: 'http://localhost:8989/route',
         }),
         waypoints: [
-          L.latLng(43.279049,3.469491),
-          L.latLng(43.289077,3.447046)
+          L.latLng(43.279049, 3.469491),
+          L.latLng(43.289077, 3.447046),
         ],
-        geocoder: photonGeocoder
-      });
+        geocoder: photonGeocoder,
+      })
 
-      var map = L.map('mapid');
-      map.setMaxBounds(BBOX);
-      map.setView(center, zoom);
-      map.addLayer(layer);
-      map.addControl(geocoder);
-      map.addControl(router);
+      var map = L.map('mapid')
+      map.setMaxBounds(BBOX)
+      map.setView(center, zoom)
+      map.addLayer(layer)
+      map.addControl(geocoder)
+      map.addControl(router)
     </script>
   </body>
 </html>
@@ -158,7 +167,7 @@ Enfin j'ai mis en place une micro page Web afin de tester tout ça:
 - [lrm-graphhopper (en)][26]
 - [geofabrik (en)][27]
 
-<!-- Liens -->
+<!-- links -->
 
 [1]: https://fr.wikipedia.org/wiki/OsmAnd
 [2]: https://en.wikipedia.org/wiki/Maps.me

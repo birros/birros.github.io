@@ -1,5 +1,5 @@
 ---
-title: "Site : Passage de Hugo à VuePress"
+title: 'Site : Passage de Hugo à VuePress'
 date: 2018-12-31T22:30:00+01:00
 author: Julien Muret <contact@julienmuret.fr>
 ---
@@ -43,7 +43,7 @@ faire, juste reprendre ce que j'avais fait pour Hugo. J'en ai profité pour
 directement inclure KaTeX dans le code du thème, Viz.js reste pour moment en
 tant que dépendance externe, on verra par la suite.
 
-<!-- Liens -->
+<!-- links -->
 
 [1]: https://fr.wikipedia.org/wiki/Vue.js
 [2]: https://fr.wikipedia.org/wiki/Angular

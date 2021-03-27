@@ -1,14 +1,14 @@
 ---
-title: "Apollo : useQuery avec subscription"
+title: 'Apollo : useQuery avec subscription'
 date: 2020-06-21T15:00:00+01:00
 author: Julien Muret <contact@julienmuret.fr>
 ---
 
-Petit bout de code en TypeScript montrant comment utiliser les *hooks* d'Apollo
-GraphQL afin d'obtenir une *query* dont les données sont mises à jour à l'aide
-d'une *subscription*. Cette astuce permet de mêler plusieurs bénéfices,
-notamment celui de la compatibilité *SSR* de la *query*, avec le temps réel de
-la *subscription*.
+Petit bout de code en TypeScript montrant comment utiliser les _hooks_ d'Apollo
+GraphQL afin d'obtenir une _query_ dont les données sont mises à jour à l'aide
+d'une _subscription_. Cette astuce permet de mêler plusieurs bénéfices,
+notamment celui de la compatibilité _SSR_ de la _query_, avec le temps réel de
+la _subscription_.
 
 <!-- more -->
 
@@ -35,13 +35,13 @@ type Subscription {
 ```
 
 **Attention** : Il est important pour pouvoir remplacer les données de la
-*query* par celle de la *subscription* que nom et paramètres de la *query* et de
-la *subscription* soient identiques, ici `counter`, ainsi que le type de données
+_query_ par celle de la _subscription_ que nom et paramètres de la _query_ et de
+la _subscription_ soient identiques, ici `counter`, ainsi que le type de données
 retourné, ici `Counter!`.
 
 ## Le code
 
-La *query* est définie dans `./graphql/CounterQuery.graphql` :
+La _query_ est définie dans `./graphql/CounterQuery.graphql` :
 
 ```graphql
 query Counter {
@@ -51,7 +51,7 @@ query Counter {
 }
 ```
 
-La *subscription* est définie dans `./graphql/CounterSubscription.graphql` :
+La _subscription_ est définie dans `./graphql/CounterSubscription.graphql` :
 
 ```
 subscription Counter {
@@ -114,12 +114,12 @@ export const useCounterQueryWithSubscription: typeof useCounterQuery = (
 
 ## Conclusion
 
-L'avantage de ce *hook personnalisé*, en plus des bénéfices listés dans
+L'avantage de ce _hook personnalisé_, en plus des bénéfices listés dans
 l'introduction ([SSR (en)][8] et [temps réel (en)][9]), est d'exposer
 l'outillage qu'offre `useQuery` comme le [refetching (en)][10] ou
 l'[optimistic UI (en)][11].
 
-<!-- Liens -->
+<!-- links -->
 
 [1]: https://fr.wikipedia.org/wiki/TypeScript
 [2]: https://github.com/apollographql

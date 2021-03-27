@@ -10,10 +10,10 @@ Petit récapitulatif de ce que j'ai fais pour styliser les tableaux du site.
 
 ## Mise en place
 
-Puisque le rendu des tableaux [Markdown] effectué par [Hugo] n'ajoute pas de
-classe [CSS] utilisable par [Bootstrap] pour embellir l'affichage, j'ai ajouté
-un petit bout de code __CSS__ inspiré directement des [tableaux rayés (en)] de
-__Bootstrap__:
+Puisque le rendu des tableaux [Markdown][1] effectué par [Hugo][2] n'ajoute pas
+de classe [CSS][3] utilisable par [Bootstrap][4] pour embellir l'affichage, j'ai
+ajouté un petit bout de code **CSS** inspiré directement des
+[tableaux rayés (en)][5] de **Bootstrap** :
 
 ```css
 .blog-post table {
@@ -21,17 +21,17 @@ __Bootstrap__:
   max-width: 100%;
 }
 
-.blog-post table th[align="center"] {
+.blog-post table th[align='center'] {
   text-align: center;
 }
 
-.blog-post table th[align="right"] {
+.blog-post table th[align='right'] {
   text-align: right;
 }
 
 .blog-post table td,
 .blog-post table th {
-  padding: .75rem;
+  padding: 0.75rem;
   vertical-align: top;
   border-top: 1px solid #dee2e6;
 }
@@ -41,26 +41,26 @@ __Bootstrap__:
   border-bottom: 2px solid #dee2e6;
 }
 
-.blog-post table tbody tr:nth-of-type(2n+1) {
-  background-color: rgba(0,0,0,.05);
+.blog-post table tbody tr:nth-of-type(2n + 1) {
+  background-color: rgba(0, 0, 0, 0.05);
 }
 ```
 
 ## Exemple de rendu d'un tableau
 
-|    Fichiers    |       S0     |       S1     |       S2     |       S3     |
-|:--------------:|:------------:|:------------:|:------------:|:------------:|
-|    __F0__      |       ✔      |       ✔      |       ✖      |       ✖      |
-|    __F1__      |       ✔      |       ✖      |       ✔      |       ✖      |
-|    __F2__      |       ✖      |       ✖      |       ✖      |       ✔      |
-|    __F3__      |       ✖      |       ✖      |       ✖      |       ✔      |
-|    __F4__      |       ✖      |       ✖      |       ✔      |       ✖      |
-|    __F5__      |       ✖      |       ✔      |       ✖      |       ✖      |
+| Fichiers | S0  | S1  | S2  | S3  |
+| :------: | :-: | :-: | :-: | :-: |
+|  **F0**  |  ✔  |  ✔  |  ✖  |  ✖  |
+|  **F1**  |  ✔  |  ✖  |  ✔  |  ✖  |
+|  **F2**  |  ✖  |  ✖  |  ✖  |  ✔  |
+|  **F3**  |  ✖  |  ✖  |  ✖  |  ✔  |
+|  **F4**  |  ✖  |  ✖  |  ✔  |  ✖  |
+|  **F5**  |  ✖  |  ✔  |  ✖  |  ✖  |
 
-<!-- Liens -->
+<!-- links -->
 
-[Markdown]: https://fr.wikipedia.org/wiki/Markdown
-[Hugo]: https://fr.wikipedia.org/wiki/Hugo_(logiciel)
-[CSS]: https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade
-[Bootstrap]: https://fr.wikipedia.org/wiki/Bootstrap_(framework)
-[tableaux rayés (en)]: https://getbootstrap.com/docs/4.0/content/tables/#striped-rows
+[1]: https://fr.wikipedia.org/wiki/Markdown
+[2]: https://fr.wikipedia.org/wiki/Hugo_(logiciel)
+[3]: https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade
+[4]: https://fr.wikipedia.org/wiki/Bootstrap_(framework)
+[5]: https://getbootstrap.com/docs/4.0/content/tables/#striped-rows
