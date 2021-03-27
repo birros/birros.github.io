@@ -2,43 +2,56 @@ import { Box, BoxProps, Link, Text } from '@chakra-ui/react'
 import React from 'react'
 import ContainerizedLayout from './ContainerizedLayout'
 import NextLink from 'next/link'
+import { Keys } from '../lib/locales'
+import { useTranslate } from '../lib/hooks'
 
 const getCurrentYear = () => new Date().getFullYear()
 
-const items = [
+interface Item {
+  labelKey: Keys
+  href: string
+}
+
+const items: Array<Item> = [
   {
-    label: 'Shader extrait du framework OGL',
+    labelKey: 'footer.ogl',
     href: 'https://github.com/oframe/ogl',
   },
   {
-    label: 'Images d’illustration issues de Pixabay',
+    labelKey: 'footer.pixabay',
     href: 'https://pixabay.com/',
   },
   {
-    label: 'Avatar généré grâce au Avataaars Generator',
+    labelKey: 'footer.avataaars',
     href: 'https://getavataaars.com/',
   },
 ]
 
-const Footer: React.FC<BoxProps> = (props) => (
-  <Box py="10" backgroundColor="gray.100" {...props}>
-    <ContainerizedLayout
-      display="flex"
-      alignItems="center"
-      justifyContent="center"
-      flexDirection="column"
-      textAlign="center"
-    >
-      <Text color="gray.800">{getCurrentYear()} © Tous droits réservés</Text>
-      {items.map(({ label, href }) => (
-        <NextLink href={href} passHref>
-          <Link key={href} color="gray.800">
-            {label}
-          </Link>
-        </NextLink>
-      ))}
-    </ContainerizedLayout>
-  </Box>
-)
+const Footer: React.FC<BoxProps> = (props) => {
+  const _ = useTranslate()
+
+  return (
+    <Box py="10" backgroundColor="gray.100" {...props}>
+      <ContainerizedLayout
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        flexDirection="column"
+        textAlign="center"
+      >
+        <Text color="gray.800">
+          {getCurrentYear()} © {_('footer.copyrith')}
+        </Text>
+        {items.map(({ labelKey, href }) => (
+          <NextLink href={href} passHref>
+            <Link key={href} color="gray.800">
+              {_(labelKey)}
+            </Link>
+          </NextLink>
+        ))}
+      </ContainerizedLayout>
+    </Box>
+  )
+}
 
 export default Footer

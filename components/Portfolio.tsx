@@ -6,61 +6,67 @@ import Work from './Work'
 import { IoIosAddCircleOutline } from 'react-icons/io'
 import { theme as defaultTheme } from '@chakra-ui/react'
 import useScrollIntoView from '../lib/useScrollIntoView'
+import { useTranslate } from '../lib/hooks'
+import { Keys } from '../lib/locales'
 
-const works = [
+interface IWork {
+  src: string
+  color: string
+  title: string
+  descriptionKey: Keys
+  href: string
+}
+
+const works: Array<IWork> = [
   {
     src: '/assets/home/hole-in-wall.jpg',
     color: defaultTheme.colors.yellow[700],
     title: 'Yvivre',
-    description: `Une plateforme collaborative d’élaboration de projet immobilier en copropriété.`,
+    descriptionKey: 'works.yvivre',
     href: 'https://yvivre.com/',
   },
   {
     src: '/assets/home/city.jpg',
     color: defaultTheme.colors.red[800],
     title: 'PlugImmo',
-    description: 'Une place de marché immobilière.',
+    descriptionKey: 'works.plugimmo',
     href: 'https://www.plugimmo.pro/',
   },
   {
     src: '/assets/home/light-bulbs.jpg',
     color: defaultTheme.colors.green[700],
     title: 'Comwatt',
-    description: 'Un simulateur de consommation énergétique.',
+    descriptionKey: 'works.comwatt',
     href: 'https://www.comwatt.com/',
   },
   {
     src: '/assets/home/laptop.jpg',
     color: defaultTheme.colors.blue[900],
     title: 'Muffin',
-    description: 'Un CRM utilisé par un réseau associatif.',
+    descriptionKey: 'works.muffin',
     href: 'https://caramia.fr/project/muffin-active-application-muffin',
   },
   {
     src: '/assets/home/hand.png',
     color: defaultTheme.colors.teal[700],
     title: 'Walt',
-    description: 'Une plateforme de travail en alternance.',
+    descriptionKey: 'works.walt',
     href: 'https://walt.community/',
   },
 ]
 
 const Portfolio: React.FC = () => {
   const { ref, handleClick } = useScrollIntoView()
+  const _ = useTranslate()
 
   return (
     <Section
       backgroundColor="gray.100"
-      header={<>Mes projets récents</>}
+      header={_('portfolio.header')}
       description={
         <>
-          <Box as="div">
-            Voici quelques projets techs sur lesquels je suis intervenu
-            dernièrement.
-          </Box>{' '}
-          <Box as="div">
-            Vous voulez en savoir plus ? Parlons-en directement…
-          </Box>
+          <Box as="div">{_('portfolio.descriptionTop')}</Box>{' '}
+          <Box as="div">{_('portfolio.descriptionBottom')}</Box>
         </>
       }
     >
@@ -71,12 +77,12 @@ const Portfolio: React.FC = () => {
           justifyContent="center"
           m="-3"
         >
-          {works.map(({ href, color, title, description, src }) => (
+          {works.map(({ href, color, title, descriptionKey, src }) => (
             <Work
               key={href}
               href={href}
               title={title}
-              description={description}
+              description={_(descriptionKey)}
               src={src}
               color={color}
               maxW="325px"
@@ -102,7 +108,7 @@ const Portfolio: React.FC = () => {
               <Box color="gray.600" mr="2">
                 <IoIosAddCircleOutline fontSize="2rem" />
               </Box>
-              <Box>Ajoutons le votre…</Box>
+              <Box>{_('portfolio.add')}</Box>
             </Link>
           </Card>
         </Flex>

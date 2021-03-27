@@ -3,9 +3,11 @@ import { Box, Flex, FlexProps, Heading } from '@chakra-ui/react'
 import NextImage from 'next/image'
 import useMouseTrail from '../lib/useMouseTrail'
 import ContactButton from './ContactButton'
+import { useTranslate } from '../lib/hooks'
 
 const Hero: React.FC<FlexProps> = (props) => {
   const ref = useMouseTrail()
+  const _ = useTranslate()
 
   return (
     <Flex
@@ -31,18 +33,18 @@ const Hero: React.FC<FlexProps> = (props) => {
       >
         <Heading as="h1" size="3xl" textAlign="center">
           <Box as="span" whiteSpace="nowrap">
-            Développeur
+            {_('hero.titleLeft')}
           </Box>{' '}
           <Box as="span" whiteSpace="nowrap">
-            Front-end
+            {_('hero.titleRight')}
           </Box>
         </Heading>
         <Heading as="p" textAlign="center" size="lg" fontWeight="normal" mt={2}>
           <Box as="span" whiteSpace="nowrap">
-            Je donne vie à vos projets,
+            {_('hero.subtitleLeft')}
           </Box>{' '}
           <Box as="span" whiteSpace="nowrap">
-            pour vous… avec vous.
+            {_('hero.subtitleRight')}
           </Box>
         </Heading>
         <Box as="span" mt="4">

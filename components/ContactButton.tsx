@@ -1,9 +1,11 @@
 import React from 'react'
 import { Button, Link, ButtonProps } from '@chakra-ui/react'
 import useScrollIntoView from '../lib/useScrollIntoView'
+import { useTranslate } from '../lib/hooks'
 
 const ContactButton: React.FC<ButtonProps> = (props) => {
   const { ref, handleClick } = useScrollIntoView()
+  const _ = useTranslate()
 
   return (
     <Button
@@ -16,7 +18,7 @@ const ContactButton: React.FC<ButtonProps> = (props) => {
       textDecoration="none !important"
       {...props}
     >
-      Contactez-moi
+      {_('contactButton.label')}
     </Button>
   )
 }
