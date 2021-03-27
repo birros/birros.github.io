@@ -14,19 +14,15 @@ const Section: React.FC<Props & BoxProps> = ({
   ...rest
 }) => (
   <Box py={{ base: 12, sm: 24 }} {...rest}>
-    <ContainerizedLayout>
+    <ContainerizedLayout mb={children ? { base: 8, sm: 12 } : undefined}>
       <Heading as="h2" size="lg" textAlign="center">
         {header}
       </Heading>
-      <Text
-        textAlign="center"
-        mt={6}
-        mb={children ? { base: 8, sm: 12 } : undefined}
-      >
+      <Text textAlign="center" mt={6}>
         {description}
       </Text>
-      {children}
     </ContainerizedLayout>
+    {children}
   </Box>
 )
 

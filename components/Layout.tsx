@@ -24,7 +24,7 @@ const Layout: React.FC = ({ children }) => (
       position="fixed"
       width="100%"
       top="0"
-      zIndex="2"
+      zIndex="4"
     />
     <Box as="main" pt="14" minHeight="calc(var(--vh, 1vh) * 100)">
       {children}
