@@ -8,10 +8,24 @@ const useMouseTrail = () => {
       return
     }
 
-    ;(async () => {
+    const setup = async () => {
       const setupMouseTrail = (await import('./setupMouseTrail')).default
       setupMouseTrail(ref.current)
-    })()
+    }
+
+    let timeout: NodeJS.Timeout
+    const cb = () => (timeout = setTimeout(setup, 5 * 1000))
+
+    if ('requestIdleCallback' in window) {
+      // @ts-ignore
+      requestIdleCallback(cb, { timeout: 5 * 1000 })
+    } else {
+      requestAnimationFrame(cb)
+    }
+
+    return () => {
+      clearTimeout(timeout)
+    }
   }, [ref])
 
   return ref
