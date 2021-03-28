@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import { useCallback, useEffect, useState } from 'react'
 import locales, { Keys, Langs } from './locales'
+import requestIdleCallback, { cancelIdleCallback } from './requestIdleCallback'
 
 export const useIsBrowser = () => {
   const [isBrowser, setIsBrowser] = useState(false)
@@ -54,17 +55,21 @@ const updateViewportHeight = () => {
   document.documentElement.style.setProperty('--vh', `${vh}px`)
 }
 
+const updateViewportHeightCallback = () =>
+  requestIdleCallback(updateViewportHeight)
+
 export const useSetupVH = (updateOnResize?: boolean) => {
   useEffect(() => {
-    updateViewportHeight()
+    const requestObj = updateViewportHeightCallback()
 
     if (updateOnResize) {
-      window.addEventListener('resize', updateViewportHeight)
+      window.addEventListener('resize', updateViewportHeightCallback)
     }
 
     return () => {
       if (updateOnResize) {
-        window.removeEventListener('resize', updateViewportHeight)
+        cancelIdleCallback(requestObj)
+        window.removeEventListener('resize', updateViewportHeightCallback)
       }
     }
   }, [])
