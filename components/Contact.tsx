@@ -10,6 +10,7 @@ import List from './List'
 import { useTranslate } from '../lib/hooks'
 import { IconType } from 'react-icons'
 import { Keys } from '../lib/locales'
+import { theme as defaultTheme } from '@chakra-ui/react'
 
 interface ILink {
   label?: string
@@ -51,7 +52,16 @@ const Contact: React.FC = () => {
         {socialLinks.map(({ label, labelKey, icon, href }) => (
           <NextLink href={href} key={href} passHref>
             <Badge
-              as={(props) => <Link {...props} target="_blank" />}
+              as={(props) => (
+                <Link
+                  {...props}
+                  target="_blank"
+                  backgroundColor={defaultTheme.colors.white}
+                  _hover={{
+                    backgroundColor: defaultTheme.colors.gray[300],
+                  }}
+                />
+              )}
               label={labelKey ? _(labelKey) : label ?? ''}
               iconColor="primary.500"
               icon={icon}

@@ -1,8 +1,8 @@
-import React, { forwardRef } from 'react'
+import React, { forwardRef, useMemo } from 'react'
 import { Box, Container, Link, List, ListItem } from '@chakra-ui/react'
 import Section from './Section'
 import Card from './Card'
-import Work from './Work'
+import Work, { WorkProps } from './Work'
 import { IoIosAddCircleOutline } from 'react-icons/io'
 import { theme as defaultTheme } from '@chakra-ui/react'
 import useScrollIntoView from '../lib/useScrollIntoView'
@@ -10,47 +10,44 @@ import { useTranslate } from '../lib/hooks'
 import { Keys } from '../lib/locales'
 import { FADE_UP_DELAY } from '../lib/constants'
 import FadeUpWhenVisible from './FadeUpWhenVisible'
+import parseColor from '../lib/parseColor'
 
-interface IWork {
-  src: string
-  color: string
-  title: string
+interface IWork extends Omit<WorkProps, 'description'> {
   descriptionKey: Keys
-  href: string
 }
 
 const works: Array<IWork> = [
   {
     src: '/assets/home/hole-in-wall.jpg',
-    color: defaultTheme.colors.yellow[700],
+    colorScheme: defaultTheme.colors.yellow,
     title: 'Yvivre',
     descriptionKey: 'works.yvivre',
     href: 'https://yvivre.com/',
   },
   {
     src: '/assets/home/city.jpg',
-    color: defaultTheme.colors.red[800],
+    colorScheme: defaultTheme.colors.red,
     title: 'PlugImmo',
     descriptionKey: 'works.plugimmo',
     href: 'https://www.plugimmo.pro/',
   },
   {
     src: '/assets/home/light-bulbs.jpg',
-    color: defaultTheme.colors.green[700],
+    colorScheme: defaultTheme.colors.green,
     title: 'Comwatt',
     descriptionKey: 'works.comwatt',
     href: 'https://www.comwatt.com/',
   },
   {
     src: '/assets/home/laptop.jpg',
-    color: defaultTheme.colors.blue[900],
+    colorScheme: defaultTheme.colors.blue,
     title: 'Muffin',
     descriptionKey: 'works.muffin',
     href: 'https://caramia.fr/project/muffin-active-application-muffin',
   },
   {
     src: '/assets/home/hand.png',
-    color: defaultTheme.colors.teal[700],
+    colorScheme: defaultTheme.colors.teal,
     title: 'Walt',
     descriptionKey: 'works.walt',
     href: 'https://walt.community/',
@@ -60,6 +57,16 @@ const works: Array<IWork> = [
 const Portfolio: React.FC = () => {
   const { ref, handleClick } = useScrollIntoView()
   const _ = useTranslate()
+
+  const bgColor = useMemo(() => {
+    const c = parseColor(defaultTheme.colors.gray[300])
+    return `rgba(${c.r}, ${c.g}, ${c.b}, 0.9)`
+  }, [])
+
+  const bgColorHover = useMemo(() => {
+    const c = parseColor(defaultTheme.colors.gray[400])
+    return `rgba(${c.r}, ${c.g}, ${c.b}, 0.9)`
+  }, [])
 
   return (
     <Section
@@ -80,7 +87,7 @@ const Portfolio: React.FC = () => {
           justifyContent="center"
           m="-3"
         >
-          {works.map(({ href, color, title, descriptionKey, src }, i) => (
+          {works.map(({ href, colorScheme, title, descriptionKey, src }, i) => (
             <Work
               key={href}
               as={forwardRef((props, ref) => (
@@ -95,7 +102,7 @@ const Portfolio: React.FC = () => {
               title={title}
               description={_(descriptionKey)}
               src={src}
-              color={color}
+              colorScheme={colorScheme}
               maxW="325px"
               m="3"
             />
@@ -112,7 +119,6 @@ const Portfolio: React.FC = () => {
             ))}
             maxW="325px"
             m="3"
-            backgroundColor="gray.300"
             borderColor="gray.500"
             borderStyle="dashed"
             borderWidth="2px"
@@ -123,6 +129,10 @@ const Portfolio: React.FC = () => {
               onClick={handleClick}
               color="gray.600"
               textDecoration="none !important"
+              backgroundColor={bgColor}
+              _hover={{
+                backgroundColor: bgColorHover,
+              }}
             >
               <Box color="gray.600" mr="2">
                 <IoIosAddCircleOutline fontSize="2rem" />
