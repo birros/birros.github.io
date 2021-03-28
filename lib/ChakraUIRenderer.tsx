@@ -16,6 +16,7 @@ import NextLink from 'next/link'
 import NextImage from 'next/image'
 import Highlight, { defaultProps, Language } from 'prism-react-renderer'
 import theme from 'prism-react-renderer/themes/okaidia'
+import { ExternalLinkIcon } from '@chakra-ui/icons'
 
 type PropsType = {
   children?: React.ReactNode
@@ -47,11 +48,27 @@ type DefaultsType = {
   inlineCode: React.FC
 }
 
-const LinkRenderer: React.FC<{ href?: string }> = ({ href, ...rest }) => (
-  <NextLink href={href ?? ''} passHref>
-    <Link {...rest} />
-  </NextLink>
-)
+const LinkRenderer: React.FC<{ href?: string }> = ({
+  href,
+  children,
+  ...rest
+}) => {
+  const isExternal = /^https?:\/\//.test(href?.trim() ?? '')
+
+  return (
+    <NextLink href={href ?? ''} passHref>
+      <Link {...rest}>
+        {children}
+        {isExternal && (
+          <>
+            {' '}
+            <ExternalLinkIcon mt="-2px" />
+          </>
+        )}
+      </Link>
+    </NextLink>
+  )
+}
 
 const imageSizeRegex = /\/.+_(?<width>\d+)x(?<height>\d+)\..+$/
 
