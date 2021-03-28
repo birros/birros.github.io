@@ -1,5 +1,5 @@
-import React from 'react'
-import { Box, Container, Flex, Link } from '@chakra-ui/react'
+import React, { forwardRef } from 'react'
+import { Box, Container, Link, List, ListItem } from '@chakra-ui/react'
 import Section from './Section'
 import Card from './Card'
 import Work from './Work'
@@ -8,6 +8,8 @@ import { theme as defaultTheme } from '@chakra-ui/react'
 import useScrollIntoView from '../lib/useScrollIntoView'
 import { useTranslate } from '../lib/hooks'
 import { Keys } from '../lib/locales'
+import { FADE_UP_DELAY } from '../lib/constants'
+import FadeUpWhenVisible from './FadeUpWhenVisible'
 
 interface IWork {
   src: string
@@ -71,15 +73,24 @@ const Portfolio: React.FC = () => {
       }
     >
       <Container maxW="container.xl">
-        <Flex
+        <List
+          display="flex"
           flexWrap="wrap"
           alignItems="center"
           justifyContent="center"
           m="-3"
         >
-          {works.map(({ href, color, title, descriptionKey, src }) => (
+          {works.map(({ href, color, title, descriptionKey, src }, i) => (
             <Work
               key={href}
+              as={forwardRef((props, ref) => (
+                <FadeUpWhenVisible
+                  ref={ref}
+                  as={ListItem}
+                  delay={i * FADE_UP_DELAY}
+                  {...props}
+                />
+              ))}
               href={href}
               title={title}
               description={_(descriptionKey)}
@@ -91,6 +102,14 @@ const Portfolio: React.FC = () => {
           ))}
 
           <Card
+            as={forwardRef((props, ref) => (
+              <FadeUpWhenVisible
+                ref={ref}
+                as={ListItem}
+                delay={works.length * FADE_UP_DELAY}
+                {...props}
+              />
+            ))}
             maxW="325px"
             m="3"
             backgroundColor="gray.300"
@@ -111,7 +130,7 @@ const Portfolio: React.FC = () => {
               <Box>{_('portfolio.add')}</Box>
             </Link>
           </Card>
-        </Flex>
+        </List>
       </Container>
     </Section>
   )

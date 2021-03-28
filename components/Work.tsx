@@ -1,7 +1,7 @@
-import { Text, Box, BoxProps, Link } from '@chakra-ui/react'
+import { Text, Box, Link } from '@chakra-ui/react'
 import React from 'react'
 import NextImage from 'next/image'
-import Card from './Card'
+import Card, { CardProps } from './Card'
 import NextLink from 'next/link'
 
 interface Props {
@@ -12,7 +12,7 @@ interface Props {
   src: string
 }
 
-const Work: React.FC<Props & BoxProps> = ({
+const Work: React.FC<Props & CardProps> = ({
   color,
   href,
   title,

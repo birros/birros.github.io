@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { Box, BoxProps, Heading, Text } from '@chakra-ui/react'
 import ContainerizedLayout from './ContainerizedLayout'
+import FadeUpWhenVisible from './FadeUpWhenVisible'
 
 interface Props {
   header: React.ReactNode
@@ -15,12 +16,20 @@ const Section: React.FC<Props & BoxProps> = ({
 }) => (
   <Box py={{ base: 12, sm: 24 }} {...rest}>
     <ContainerizedLayout mb={children ? { base: 8, sm: 12 } : undefined}>
-      <Heading as="h2" size="lg" textAlign="center">
+      <FadeUpWhenVisible
+        as={forwardRef((props, ref) => (
+          <Heading ref={ref} as="h2" size="lg" textAlign="center" {...props} />
+        ))}
+      >
         {header}
-      </Heading>
-      <Text textAlign="center" mt={6}>
+      </FadeUpWhenVisible>
+      <FadeUpWhenVisible
+        as={forwardRef((props, ref) => (
+          <Text ref={ref} textAlign="center" mt={6} {...props} />
+        ))}
+      >
         {description}
-      </Text>
+      </FadeUpWhenVisible>
     </ContainerizedLayout>
     {children}
   </Box>
