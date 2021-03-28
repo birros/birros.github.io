@@ -11,6 +11,11 @@ import {
   OrderedList,
   UnorderedList,
   Box,
+  Table,
+  Thead,
+  Tbody,
+  Tr,
+  Td,
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import NextImage from 'next/image'
@@ -46,6 +51,11 @@ type DefaultsType = {
   definition: React.FC
   heading: React.FC<{ level: number }>
   inlineCode: React.FC
+  table: React.FC
+  tableHead: React.FC
+  tableBody: React.FC
+  tableRow: React.FC
+  tableCell: React.FC
 }
 
 const LinkRenderer: React.FC<{ href?: string }> = ({
@@ -213,6 +223,19 @@ export const defaults: DefaultsType = {
     const { children } = props
     return <Code {...getCoreProps(props)}>{children}</Code>
   },
+  table: (props) => (
+    <Table {...getCoreProps(props)} variant="striped">
+      {props.children}
+    </Table>
+  ),
+  tableHead: (props) => (
+    <Thead {...getCoreProps(props)}>{props.children}</Thead>
+  ),
+  tableBody: (props) => (
+    <Tbody {...getCoreProps(props)}>{props.children}</Tbody>
+  ),
+  tableRow: (props) => <Tr {...getCoreProps(props)}>{props.children}</Tr>,
+  tableCell: (props) => <Td {...getCoreProps(props)}>{props.children}</Td>,
 }
 
 export default function Renderer(theme = defaults): DefaultsType {
@@ -233,5 +256,10 @@ export default function Renderer(theme = defaults): DefaultsType {
     definition: theme.definition,
     heading: theme.heading,
     inlineCode: theme.inlineCode,
+    table: theme.table,
+    tableHead: theme.tableHead,
+    tableBody: theme.tableBody,
+    tableRow: theme.tableRow,
+    tableCell: theme.tableCell,
   }
 }
