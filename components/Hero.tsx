@@ -52,6 +52,7 @@ const Hero: React.FC<FlexProps> = (props) => {
             src="/assets/home/avataaars.svg"
             width="200"
             height="200"
+            priority
           />
         </Box>
         <ContactButton mt="4" />

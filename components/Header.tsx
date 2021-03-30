@@ -23,6 +23,7 @@ const Header: React.FC<FlexProps> = (props) => (
             height={30}
             width={30}
             alt="Julien Muret"
+            priority
           />
         </Link>
       </NextLink>
