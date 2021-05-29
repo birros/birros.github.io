@@ -1,5 +1,7 @@
+import isServerSideRendering from './isServerSideRendering'
+
 const isMobileOrTablet = () => {
-  if (!process.browser) {
+  if (isServerSideRendering()) {
     return false
   }
 
