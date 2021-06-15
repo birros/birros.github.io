@@ -43,10 +43,8 @@ const Footer: React.FC<BoxProps> = (props) => {
           {getCurrentYear()} © {_('footer.copyrith')}
         </Text>
         {items.map(({ labelKey, href }) => (
-          <NextLink href={href} passHref>
-            <Link key={href} color="gray.800">
-              {_(labelKey)}
-            </Link>
+          <NextLink key={href} href={href} passHref>
+            <Link color="gray.800">{_(labelKey)}</Link>
           </NextLink>
         ))}
       </ContainerizedLayout>
