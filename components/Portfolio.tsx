@@ -90,6 +90,7 @@ const Portfolio: React.FC = () => {
           {works.map(({ href, colorScheme, title, descriptionKey, src }, i) => (
             <Work
               key={href}
+              // eslint-disable-next-line react/display-name
               as={forwardRef((props, ref) => (
                 <FadeUpWhenVisible
                   ref={ref}
@@ -109,6 +110,7 @@ const Portfolio: React.FC = () => {
           ))}
 
           <Card
+            // eslint-disable-next-line react/display-name
             as={forwardRef((props, ref) => (
               <FadeUpWhenVisible
                 ref={ref}

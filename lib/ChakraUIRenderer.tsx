@@ -82,7 +82,11 @@ const LinkRenderer: React.FC<{ href?: string }> = ({
 
 const imageSizeRegex = /\/.+_(?<width>\d+)x(?<height>\d+)\..+$/
 
-const ImageRenderer: React.FC<{ src?: string }> = ({ src, ...rest }) => {
+const ImageRenderer: React.FC<{ src?: string; alt?: string }> = ({
+  src,
+  alt,
+  ...rest
+}) => {
   const match = imageSizeRegex.exec(src ?? '')
   const [width, height] =
     match && match.groups && match.groups.width && match.groups.height
@@ -90,7 +94,7 @@ const ImageRenderer: React.FC<{ src?: string }> = ({ src, ...rest }) => {
       : [undefined, undefined]
 
   if (!width || !height) {
-    return <Image src={src} {...rest} />
+    return <Image src={src} alt={alt} {...rest} />
   }
 
   return (
@@ -105,6 +109,7 @@ const ImageRenderer: React.FC<{ src?: string }> = ({ src, ...rest }) => {
 }
 
 export const defaults: DefaultsType = {
+  // eslint-disable-next-line react/display-name
   paragraph: (props) => {
     const { children } = props
     return (
@@ -113,14 +118,17 @@ export const defaults: DefaultsType = {
       </Text>
     )
   },
+  // eslint-disable-next-line react/display-name
   emphasis: (props) => {
     const { children } = props
     return <Text as="em">{children}</Text>
   },
+  // eslint-disable-next-line react/display-name
   blockquote: (props) => {
     const { children } = props
     return <Code p={2}>{children}</Code>
   },
+  // eslint-disable-next-line react/display-name
   code: ({ language, value }) => (
     <Highlight
       {...defaultProps}
@@ -139,9 +147,9 @@ export const defaults: DefaultsType = {
         >
           <Box as="code" display="block">
             {tokens.map((line, i) => (
-              <Box as="div" {...getLineProps({ line, key: i })}>
+              <Box key={i} as="div" {...getLineProps({ line, key: i })}>
                 {line.map((token, key) => (
-                  <span {...getTokenProps({ token, key })} />
+                  <span key={key} {...getTokenProps({ token, key })} />
                 ))}
               </Box>
             ))}
@@ -150,6 +158,7 @@ export const defaults: DefaultsType = {
       )}
     </Highlight>
   ),
+  // eslint-disable-next-line react/display-name
   delete: (props) => {
     const { children } = props
     return <Text as="del">{children}</Text>
@@ -159,7 +168,9 @@ export const defaults: DefaultsType = {
   linkReference: LinkRenderer,
   image: ImageRenderer,
   imageReference: ImageRenderer,
+  // eslint-disable-next-line react/display-name
   text: ({ children }) => <Text as="span">{children}</Text>,
+  // eslint-disable-next-line react/display-name
   list: (props) => {
     const { start, ordered, children, depth } = props
     const attrs = getCoreProps(props)
@@ -185,6 +196,7 @@ export const defaults: DefaultsType = {
       </Element>
     )
   },
+  // eslint-disable-next-line react/display-name
   listItem: (props) => {
     const { children, checked } = props
     let checkbox = null
@@ -205,6 +217,7 @@ export const defaults: DefaultsType = {
     )
   },
   definition: () => null,
+  // eslint-disable-next-line react/display-name
   heading: (props) => {
     const { level, children } = props
     const sizes = ['2xl', 'xl', 'lg', 'md', 'sm', 'xs']
@@ -219,22 +232,28 @@ export const defaults: DefaultsType = {
       </Heading>
     )
   },
+  // eslint-disable-next-line react/display-name
   inlineCode: (props) => {
     const { children } = props
     return <Code {...getCoreProps(props)}>{children}</Code>
   },
+  // eslint-disable-next-line react/display-name
   table: (props) => (
     <Table {...getCoreProps(props)} variant="striped">
       {props.children}
     </Table>
   ),
+  // eslint-disable-next-line react/display-name
   tableHead: (props) => (
     <Thead {...getCoreProps(props)}>{props.children}</Thead>
   ),
+  // eslint-disable-next-line react/display-name
   tableBody: (props) => (
     <Tbody {...getCoreProps(props)}>{props.children}</Tbody>
   ),
+  // eslint-disable-next-line react/display-name
   tableRow: (props) => <Tr {...getCoreProps(props)}>{props.children}</Tr>,
+  // eslint-disable-next-line react/display-name
   tableCell: (props) => <Td {...getCoreProps(props)}>{props.children}</Td>,
 }
 

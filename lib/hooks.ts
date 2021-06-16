@@ -72,5 +72,5 @@ export const useSetupVH = (updateOnResize?: boolean) => {
         window.removeEventListener('resize', updateViewportHeightCallback)
       }
     }
-  }, [])
+  }, [updateOnResize])
 }

@@ -47,7 +47,7 @@ const FadeUpWhenVisible: React.FC<FadeUpWhenVisibleProps> = ({
     } else if (process.env.NODE_ENV === 'development') {
       controls.start('hidden')
     }
-  }, [controls, inView])
+  }, [controls, inView, animationEnabled])
 
   return (
     <MotionBox

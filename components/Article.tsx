@@ -24,9 +24,10 @@ const Article: React.FC<ArticleProps> = ({ title, content, author, date }) => {
         <ReactMarkdown
           renderers={ChakraUIRenderer()}
           plugins={[gfm]}
-          children={content}
           escapeHtml={false}
-        />
+        >
+          {content}
+        </ReactMarkdown>
       </Box>
     </Box>
   )

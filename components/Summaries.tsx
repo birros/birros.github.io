@@ -44,9 +44,10 @@ const Summaries: React.FC<SummariesProps> = ({ base, items }) => {
               <ReactMarkdown
                 renderers={ChakraUIRenderer()}
                 plugins={[gfm]}
-                children={summary}
                 escapeHtml={false}
-              />
+              >
+                {summary}
+              </ReactMarkdown>
               <NextLink href={`${base}/${slug}`} passHref>
                 <Link>{_('summary.more')}</Link>
               </NextLink>
