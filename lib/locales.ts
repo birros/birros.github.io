@@ -35,7 +35,7 @@ const locales = {
     'portfolio.add': 'Ajoutons le votre…',
     'works.yvivre': `Une plateforme collaborative d’élaboration de projet immobilier en copropriété.`,
     'works.plugimmo': 'Une place de marché immobilière.',
-    'works.comwatt': 'Un simulateur de consommation énergétique.',
+    'works.save': 'Une plateforme de réparation de téléphones.',
     'works.muffin': 'Un CRM utilisé par un réseau associatif.',
     'works.walt': 'Une plateforme de travail en alternance.',
     'contact.header': 'Me contacter',

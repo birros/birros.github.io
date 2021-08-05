@@ -32,13 +32,6 @@ const works: Array<IWork> = [
     href: 'https://www.plugimmo.pro/',
   },
   {
-    src: '/assets/home/light-bulbs.jpg',
-    colorScheme: defaultTheme.colors.green,
-    title: 'Comwatt',
-    descriptionKey: 'works.comwatt',
-    href: 'https://www.comwatt.com/',
-  },
-  {
     src: '/assets/home/laptop.jpg',
     colorScheme: defaultTheme.colors.blue,
     title: 'Muffin',
@@ -51,6 +44,13 @@ const works: Array<IWork> = [
     title: 'Walt',
     descriptionKey: 'works.walt',
     href: 'https://walt.community/',
+  },
+  {
+    src: '/assets/home/light-bulbs.jpg',
+    colorScheme: defaultTheme.colors.green,
+    title: 'Save',
+    descriptionKey: 'works.save',
+    href: 'https://save.co/',
   },
 ]
 
