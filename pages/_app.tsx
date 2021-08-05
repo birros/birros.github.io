@@ -33,7 +33,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
             {
               url: 'https://julienmuret.fr/assets/home/screenshot.png',
               width: 2880,
-              height: 1648,
+              height: 1800,
               alt: _('opengraph.imageAlt'),
             },
           ],
