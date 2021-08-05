@@ -14,8 +14,8 @@ interface Item {
 
 const items: Array<Item> = [
   {
-    labelKey: 'footer.ogl',
-    href: 'https://github.com/oframe/ogl',
+    labelKey: 'footer.vanta',
+    href: 'https://github.com/tengbao/vanta',
   },
   {
     labelKey: 'footer.pixabay',

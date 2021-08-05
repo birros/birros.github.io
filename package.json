@@ -32,7 +32,6 @@
     "katex": "^0.13.11",
     "next": "^11.0.0",
     "next-seo": "^4.24.0",
-    "ogl": "^0.0.73",
     "prism-react-renderer": "^1.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -43,6 +42,8 @@
     "remark-gfm": "^1.0.0",
     "remark-html": "^13.0.1",
     "smoothscroll-polyfill": "^0.4.4",
+    "three": "^0.121.0",
+    "vanta": "^0.5.21",
     "viz.js": "^2.1.2"
   }
 }

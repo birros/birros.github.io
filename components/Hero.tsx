@@ -1,18 +1,18 @@
 import React from 'react'
 import { Box, Flex, FlexProps, Heading } from '@chakra-ui/react'
 import NextImage from 'next/image'
-import useMouseTrail from '../lib/useMouseTrail'
+import useVantaWaves from '../lib/useVantaWaves'
 import ContactButton from './ContactButton'
 import { useTranslate } from '../lib/hooks'
 
 const Hero: React.FC<FlexProps> = (props) => {
-  const ref = useMouseTrail()
+  const ref = useVantaWaves()
   const _ = useTranslate()
 
   return (
     <Flex
       as="div"
-      backgroundColor="gray.100"
+      backgroundColor="blue.800"
       position="relative"
       ref={ref}
       alignItems="center"
@@ -31,7 +31,7 @@ const Hero: React.FC<FlexProps> = (props) => {
         flexDirection="column"
         p="4"
       >
-        <Heading as="h1" size="3xl" textAlign="center">
+        <Heading as="h1" size="3xl" textAlign="center" color="white">
           <Box as="span" whiteSpace="nowrap">
             {_('hero.titleLeft')}
           </Box>{' '}
@@ -39,7 +39,14 @@ const Hero: React.FC<FlexProps> = (props) => {
             {_('hero.titleRight')}
           </Box>
         </Heading>
-        <Heading as="p" textAlign="center" size="lg" fontWeight="normal" mt={2}>
+        <Heading
+          as="p"
+          textAlign="center"
+          size="lg"
+          fontWeight="normal"
+          mt={2}
+          color="white"
+        >
           <Box as="span" whiteSpace="nowrap">
             {_('hero.subtitleLeft')}
           </Box>{' '}
