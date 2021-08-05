@@ -83,7 +83,7 @@ const locales = {
     'portfolio.add': `Let's add yours…`,
     'works.yvivre': `A collaborative platform for the development of real estate projects in co-ownership.`,
     'works.plugimmo': 'A real estate marketplace.',
-    'works.comwatt': 'An energy consumption simulator.',
+    'works.save': 'A phone repair platform.',
     'works.muffin': 'A CRM used by an association network.',
     'works.walt': 'A work-study platform.',
     'contact.header': 'Contact me',
