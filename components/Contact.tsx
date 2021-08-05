@@ -1,8 +1,8 @@
 import { FaLinkedin } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 import IconMalt from './IconMalt'
-import { Link } from '@chakra-ui/react'
-import React from 'react'
+import { Link, LinkProps } from '@chakra-ui/react'
+import React, { forwardRef } from 'react'
 import Section from './Section'
 import Badge from './Badge'
 import NextLink from 'next/link'
@@ -37,6 +37,19 @@ export const socialLinks: Array<ILink> = [
   },
 ]
 
+const BadgeLink = forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => (
+  <Link
+    {...props}
+    ref={ref}
+    target="_blank"
+    backgroundColor={defaultTheme.colors.white}
+    _hover={{
+      backgroundColor: defaultTheme.colors.gray[300],
+    }}
+  />
+))
+BadgeLink.displayName = 'BadgeLink'
+
 const Contact: React.FC = () => {
   const _ = useTranslate()
 
@@ -52,16 +65,7 @@ const Contact: React.FC = () => {
         {socialLinks.map(({ label, labelKey, icon, href }) => (
           <NextLink href={href} key={href} passHref>
             <Badge
-              as={(props) => (
-                <Link
-                  {...props}
-                  target="_blank"
-                  backgroundColor={defaultTheme.colors.white}
-                  _hover={{
-                    backgroundColor: defaultTheme.colors.gray[300],
-                  }}
-                />
-              )}
+              as={BadgeLink}
               label={labelKey ? _(labelKey) : label ?? ''}
               iconColor="primary.500"
               icon={icon}

@@ -74,8 +74,12 @@ const Portfolio: React.FC = () => {
       header={_('portfolio.header')}
       description={
         <>
-          <Box as="div">{_('portfolio.descriptionTop')}</Box>{' '}
-          <Box as="div">{_('portfolio.descriptionBottom')}</Box>
+          <Box as="span" display="block">
+            {_('portfolio.descriptionTop')}
+          </Box>{' '}
+          <Box as="span" display="block">
+            {_('portfolio.descriptionBottom')}
+          </Box>
         </>
       }
     >

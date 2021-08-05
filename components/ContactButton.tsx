@@ -1,17 +1,36 @@
-import React from 'react'
-import { Button, Link, ButtonProps } from '@chakra-ui/react'
+import React, { forwardRef } from 'react'
+import {
+  Button,
+  Link,
+  ButtonProps,
+  LinkProps,
+  useMergeRefs,
+} from '@chakra-ui/react'
 import useScrollIntoView from '../lib/useScrollIntoView'
 import { useTranslate } from '../lib/hooks'
 
+const ButtonLink = forwardRef<HTMLAnchorElement, LinkProps>(
+  (props, refForwarded) => {
+    const { ref, handleClick } = useScrollIntoView()
+
+    return (
+      <Link
+        {...props}
+        ref={useMergeRefs(ref, refForwarded)}
+        onClick={handleClick}
+        href="#contact"
+      />
+    )
+  }
+)
+ButtonLink.displayName = 'ButtonLink'
+
 const ContactButton: React.FC<ButtonProps> = (props) => {
-  const { ref, handleClick } = useScrollIntoView()
   const _ = useTranslate()
 
   return (
     <Button
-      as={(props) => (
-        <Link {...props} ref={ref} onClick={handleClick} href="#contact" />
-      )}
+      as={ButtonLink}
       colorScheme="primary"
       borderRadius="full"
       size="lg"
