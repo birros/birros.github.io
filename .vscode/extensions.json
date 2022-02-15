@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "esbenp.prettier-vscode",
-    "jpoissonnier.vscode-styled-components"
+    "styled-components.vscode-styled-components",
+    "bierner.markdown-mermaid"
   ]
 }

@@ -7,12 +7,14 @@ import { ApiProps } from '../lib/api'
 import Infos from './Infos'
 import useKatex from '../lib/useKatex'
 import useGraphViz from '../lib/useGraphViz'
+import useMermaid from '../lib/useMermaid'
 
 export type ArticleProps = Omit<Omit<ApiProps, 'summary'>, 'slug'>
 
 const Article: React.FC<ArticleProps> = ({ title, content, author, date }) => {
   useKatex()
   useGraphViz()
+  useMermaid()
 
   return (
     <Box as="article">
