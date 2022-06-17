@@ -17,6 +17,22 @@ const Layout: React.FC = ({ children }) => (
           }
         `}
       </style>
+      {/* Setup print css */}
+      <style>
+        {`
+          @media print {
+            body > div > header,
+            body > div > footer {
+              display: none !important;
+            }
+
+            body > div > main {
+              min-height: unset !important;
+              padding: unset !important;
+            }
+          }
+        `}
+      </style>
     </Head>
     <Header
       borderBottom="1px"

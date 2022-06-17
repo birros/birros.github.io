@@ -6,11 +6,7 @@ import Head from 'next/head'
 import theme from '../lib/theme'
 import { useSetupVH, useTranslate } from '../lib/hooks'
 import isMobileOrTablet from '../lib/isMobileOrTablet'
-import setupScrollIntoViewPolyfill from '../lib/setupScrollIntoViewPolyfill'
 import { NextSeo } from 'next-seo'
-import NoScriptStyle from '../components/NoScriptStyle'
-
-setupScrollIntoViewPolyfill()
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   useSetupVH(!isMobileOrTablet())
@@ -21,7 +17,6 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
       <Head>
         <link rel="shortcut icon" href="/favicon.svg" type="image/svg" />
       </Head>
-      <NoScriptStyle />
       <NextSeo
         openGraph={{
           url: _('opengraph.url'),
