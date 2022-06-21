@@ -93,8 +93,8 @@ const resume: IResume = {
   skills: {
     title: 'Compétences',
     items: [
-      ['React.js', 'TypeScript'],
-      ['Next.js', 'Lodash', 'Immer'],
+      ['React.js', 'TypeScript', 'Next.js'],
+      ['Node.js', 'Lodash', 'Immer'],
       ['SASS', 'SCSS', 'CSS-in-JS'],
       ['API REST', 'GraphQL'],
       ['Shell', 'SSH', 'Docker'],
@@ -107,6 +107,7 @@ const resume: IResume = {
     items: [
       ['Autonomie', 'Rigueur'],
       ['Altruisme', 'Pédagogie'],
+      ['Curiosité', 'Initiative'],
     ],
   },
   langs: {
