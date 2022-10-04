@@ -199,15 +199,17 @@ const resume: IResume = {
     title: 'Autres expériences',
     items: [
       {
-        title: 'Divers • Vie personnelle',
+        title: 'Autodicate • Santé',
         period: '2010-2018',
         content: [
-          `J'ai été contraint d'arrêter mes études pour des raisons de
-                    santé. Durant cette période, j'ai tout de même travaillé,
-                    notamment dans la restauration, expérience sur laquelle je
-                    ne m'épanche pas ici, car hors sujet. Aussi, j'ai utilisé
-                    mon temps libre pour me former en autodidacte sur diverses
-                    technos, avant de choir le dev web professionnellement.`,
+          `Contraint d'arrêter mes études pour des raisons de santé, j'ai tout
+          de même continué à me former en autodidacte sur diverses technos,
+          avant d'enfin me lancer professionnellement en tant que dev web.`,
+
+          `Durant cette période, j'ai tout de même eu une activité
+          professionnelle, mais dans un domaine n'ayant aucun rapport avec
+          l'informatique, voilà pourquoi je préfère ne pas détailler cette
+          expérience ici.`,
         ],
       },
     ],
