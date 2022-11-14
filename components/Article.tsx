@@ -2,18 +2,17 @@ import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import gfm from 'remark-gfm'
 import { Heading, Box } from '@chakra-ui/react'
+import rehypeRaw from 'rehype-raw'
 import ChakraUIRenderer from '../lib/ChakraUIRenderer'
 import { ApiProps } from '../lib/api'
 import Infos from './Infos'
 import useKatex from '../lib/useKatex'
-import useGraphViz from '../lib/useGraphViz'
 import useMermaid from '../lib/useMermaid'
 
 export type ArticleProps = Omit<Omit<ApiProps, 'summary'>, 'slug'>
 
 const Article: React.FC<ArticleProps> = ({ title, content, author, date }) => {
   useKatex()
-  useGraphViz()
   useMermaid()
 
   return (
@@ -24,9 +23,9 @@ const Article: React.FC<ArticleProps> = ({ title, content, author, date }) => {
       </Box>
       <Box as="div" mt={3}>
         <ReactMarkdown
-          renderers={ChakraUIRenderer()}
-          plugins={[gfm]}
-          escapeHtml={false}
+          components={ChakraUIRenderer()}
+          remarkPlugins={[gfm]}
+          rehypePlugins={[rehypeRaw]}
         >
           {content}
         </ReactMarkdown>

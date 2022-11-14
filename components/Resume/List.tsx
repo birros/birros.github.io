@@ -1,4 +1,4 @@
-import React from 'react'
+import type { FC, PropsWithChildren } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faBirthdayCake,
@@ -92,7 +92,7 @@ function getChild(
         const icon = getIcon(item.type)
         const values = getValues(item)
 
-        const Container: React.SFC = item.link
+        const Container: FC<PropsWithChildren> = item.link
           ? ({ children }) => (
               <Link
                 href={item.link}

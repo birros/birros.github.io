@@ -12,9 +12,8 @@ const useKatex = () => {
     }
 
     const requestObj = requestIdleCallback(async () => {
-      const renderMathInElement = (
-        await import('katex/dist/contrib/auto-render')
-      ).default
+      const renderMathInElement = (await import('katex/contrib/auto-render'))
+        .default
 
       renderMathInElement(document.body, {
         delimiters: [

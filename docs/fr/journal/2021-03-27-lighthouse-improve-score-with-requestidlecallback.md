@@ -10,7 +10,7 @@ animation sur la page d'accueil. Grâce à [requestIdleCallback][3],
 [setTimeout][4] et une [expression régulière][5] j'ai pû faire passer le score
 de 57 à 100 pour un navigateur de bureau.
 
-<!-- summary_link -->
+<!-- summary_links -->
 
 [1]: https://en.wikipedia.org/wiki/Next.js
 [2]: https://en.wikipedia.org/wiki/Google_Lighthouse

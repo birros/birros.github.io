@@ -1,4 +1,5 @@
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   swcMinify: true,
   images: {
     formats: ['image/avif', 'image/webp'],
@@ -8,3 +9,5 @@ module.exports = {
     defaultLocale: 'fr',
   },
 }
+
+module.exports = nextConfig

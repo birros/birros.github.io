@@ -1,10 +1,10 @@
-import React from 'react'
+import type { FC, PropsWithChildren } from 'react'
 import { Box } from '@chakra-ui/react'
 import Header from './Header'
 import Head from 'next/head'
 import Footer from './Footer'
 
-const Layout: React.FC = ({ children }) => (
+const Layout: FC<PropsWithChildren> = ({ children }) => (
   <>
     <Head>
       {/* fix prism white spaces on safari */}

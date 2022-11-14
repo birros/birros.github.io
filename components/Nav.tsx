@@ -40,17 +40,17 @@ const Nav: React.FC<FlexProps> = (props) => {
       <Flex as="ul" listStyleType="none" alignItems="center">
         {contentLinks.map(({ href, labelKey }) => (
           <Box as="li" display="inline-block" key={href}>
-            <NextLink href={href} passHref>
-              <Link
-                py="2"
-                px="3"
-                color="gray.700"
-                display="inline-block"
-                fontWeight="medium"
-              >
-                {_(labelKey)}
-              </Link>
-            </NextLink>
+            <Link
+              as={NextLink}
+              href={href}
+              py="2"
+              px="3"
+              color="gray.700"
+              display="inline-block"
+              fontWeight="medium"
+            >
+              {_(labelKey)}
+            </Link>
           </Box>
         ))}
         <Box as="li" display="inline-block">
@@ -66,14 +66,26 @@ const Nav: React.FC<FlexProps> = (props) => {
                 <ChevronDownIcon style={{ marginTop: 2 }} />
               </Flex>
             </MenuButton>
-            <MenuList as="ul" position={!isBrowser ? 'absolute' : undefined}>
+            <MenuList
+              // as="ul"
+              position={!isBrowser ? 'absolute' : undefined}
+            >
               {langLinks.map(({ locale, label }) => (
-                <MenuItem as="li" p="0" key={locale}>
-                  <NextLink href="/" locale={locale} passHref>
-                    <Link flex="1" px="3" py="2">
-                      {label}
-                    </Link>
-                  </NextLink>
+                <MenuItem
+                  // as="li"
+                  p="0"
+                  key={locale}
+                >
+                  <Link
+                    as={NextLink}
+                    href="/"
+                    locale={locale}
+                    flex="1"
+                    px="3"
+                    py="2"
+                  >
+                    {label}
+                  </Link>
                 </MenuItem>
               ))}
             </MenuList>

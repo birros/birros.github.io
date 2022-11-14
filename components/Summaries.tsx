@@ -5,6 +5,7 @@ import { Box, Heading, Link } from '@chakra-ui/react'
 import Infos from './Infos'
 import ReactMarkdown from 'react-markdown'
 import gfm from 'remark-gfm'
+import rehypeRaw from 'rehype-raw'
 import ChakraUIRenderer from '../lib/ChakraUIRenderer'
 import { useTranslate } from '../lib/hooks'
 
@@ -33,24 +34,24 @@ const Summaries: React.FC<SummariesProps> = ({ base, items }) => {
         >
           <Box as="header">
             <Heading as="h2" size="lg">
-              <NextLink href={`${base}/${slug}`} passHref>
-                <Link>{title}</Link>
-              </NextLink>
+              <Link as={NextLink} href={`${base}/${slug}`}>
+                {title}
+              </Link>
             </Heading>
             <Infos date={date} author={author} mt="1" />
           </Box>
           {summary && (
             <Box as="div" mt={3}>
               <ReactMarkdown
-                renderers={ChakraUIRenderer()}
-                plugins={[gfm]}
-                escapeHtml={false}
+                components={ChakraUIRenderer()}
+                remarkPlugins={[gfm]}
+                rehypePlugins={[rehypeRaw]}
               >
                 {summary}
               </ReactMarkdown>
-              <NextLink href={`${base}/${slug}`} passHref>
-                <Link>{_('summary.more')}</Link>
-              </NextLink>
+              <Link as={NextLink} href={`${base}/${slug}`}>
+                {_('summary.more')}
+              </Link>
             </Box>
           )}
         </Box>

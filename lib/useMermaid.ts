@@ -2,6 +2,14 @@ import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import requestIdleCallback, { cancelIdleCallback } from './requestIdleCallback'
 
+const removeAll = (id: string) => {
+  const els = Array.from(document.querySelectorAll(id))
+
+  for (const el of els) {
+    el.parentNode?.removeChild(el)
+  }
+}
+
 const useMermaid = () => {
   const { pathname } = useRouter()
 
@@ -35,7 +43,8 @@ const useMermaid = () => {
           } catch (e) {
             console.warn(e)
           } finally {
-            tmp.parentNode?.removeChild(tmp) // already removed when rendering
+            removeAll(`#d${uuid}`) // containers
+            removeAll(`#${uuid}`) // svg elements
           }
           return undefined
         })()

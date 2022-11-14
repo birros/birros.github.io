@@ -9,7 +9,7 @@ d'ajouter le support de [mermaid (en)][3] en tant que moteur de rendu en ligne
 pour les graphes dans les fichiers [Markdown][4] :
 [Include diagrams in your Markdown files with Mermaid (en)][5].
 
-<!-- summary_link -->
+<!-- summary_links -->
 
 [1]: https://fr.wikipedia.org/wiki/Th%C3%A9orie_des_graphes
 [2]: https://fr.wikipedia.org/wiki/GitHub_(entreprise)
