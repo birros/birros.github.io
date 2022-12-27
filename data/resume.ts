@@ -93,13 +93,18 @@ const resume: IResume = {
   skills: {
     title: 'Compétences',
     items: [
-      ['React.js', 'TypeScript', 'Next.js'],
-      ['Node.js', 'Lodash', 'Immer'],
+      ['React.js', 'TypeScript', 'Node.js'],
       ['SASS', 'SCSS', 'CSS-in-JS'],
+      ['Go', 'Dart', 'Flutter'],
+      ['Next.js', 'Gatsby'],
+      ['Lodash', 'Immer'],
       ['API REST', 'GraphQL'],
       ['Shell', 'SSH', 'Docker'],
       ['Git', 'GitHub', 'GitLab'],
-      ['UI', 'UX', 'Figma', 'Sketch'],
+      ['UI', 'UX', 'Figma'],
+      ['Prettier', 'ESLint'],
+      ['Redux', 'Recoil'],
+      ['macOS', 'Linux'],
     ],
   },
   qualities: {
@@ -111,13 +116,17 @@ const resume: IResume = {
     ],
   },
   langs: {
-    title: 'Langues',
-    items: ['Français : langue maternelle', 'Anglais : professionnel (écrit)'],
+    title: 'Compléments',
+    items: [
+      'Français : langue maternelle',
+      'Anglais : professionnel',
+      'Permis : Catégorie B',
+      'Télétravail : Favorable',
+    ],
   },
   hobbies: {
     title: 'Passe-temps',
     items: [
-      ['Go', 'Flutter', 'RSS'],
       ['Marche', 'Randonnée'],
       ['Cinéma', 'Jeux vidéo'],
     ],
@@ -136,7 +145,7 @@ const resume: IResume = {
       {
         period: '2007-2010',
         title: 'Bac +2 • Maths fondamentales',
-        location: 'Université Montpellier 2 Sciences et techniques',
+        location: 'Université Montpellier II Sciences et techniques',
       },
       {
         period: '2007',
@@ -162,10 +171,10 @@ const resume: IResume = {
         period: '2020',
         title: 'Agence web • Studio Caramia • CDI',
         content: [
-          `J'ai eu l'opportunité d'intervenir sur une plateforme de
-                    travail en alternance, un CRM utilisé par un réseau
-                    associatif, un jeu pour grand parc d'attraction, un site
-                    événementiel pour un distributeur ayant pignon sur rue…`,
+          `J'ai eu l'opportunité d'intervenir sur une plateforme de travail en
+          alternance, un CRM pour un réseau associatif, un jeu déployé sur
+          l'intranet d'un parc d'attraction, un site événementiel pour un grand
+          distributeur…`,
         ],
       },
       {
@@ -186,7 +195,7 @@ const resume: IResume = {
     items: [
       {
         title: 'App native • WebArchives',
-        period: '2017-2020',
+        period: '2017-2022',
         content: [
           `Un lecteur d’archives web permettant de consulter hors
                     ligne des projets tels que Wikipédia, Wikisource, Stack

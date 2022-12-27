@@ -171,7 +171,7 @@ const Resume: React.FC<ResumeProps> = ({ className, resume }) => {
           <List data={resume.skills} />
           <List data={resume.qualities} />
           <List data={resume.langs} />
-          <List data={resume.hobbies} />
+          {/* <List data={resume.hobbies} /> */}
         </aside>
 
         <Footer data={resume.footer} />
