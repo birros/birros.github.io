@@ -105,6 +105,7 @@ const resume: IResume = {
       ['Prettier', 'ESLint'],
       ['Redux', 'Recoil'],
       ['macOS', 'Linux'],
+      ['Méthode agile', 'Kanban'],
     ],
   },
   qualities: {
@@ -119,7 +120,7 @@ const resume: IResume = {
     title: 'Compléments',
     items: [
       'Français : langue maternelle',
-      'Anglais : professionnel',
+      'Anglais : professionnel (écrit)',
       'Permis : Catégorie B',
       'Télétravail : Favorable',
     ],
@@ -134,9 +135,10 @@ const resume: IResume = {
   profile: {
     title: 'Profil',
     content: [
-      `Passionné d'informatique depuis mes études en mathématiques, j'ai
-            principalement développé mes compétences en autodidacte. Je cherche
-            un poste de développeur web.`,
+      `Passionné d'informatique et de mathématiques, avec une riche expérience
+      en entreprise et en tant que travailleur indépendant, je suis à la
+      recherche d'un poste de développeur web pour mettre mes compétences au
+      service de projets stimulants et passionnants.`,
     ],
   },
   educations: {
@@ -144,7 +146,7 @@ const resume: IResume = {
     items: [
       {
         period: '2007-2010',
-        title: 'Bac +2 • Maths fondamentales',
+        title: 'Bac +2 • Maths fondamentales et appliquées',
         location: 'Université Montpellier II Sciences et techniques',
       },
       {
@@ -158,13 +160,16 @@ const resume: IResume = {
     title: 'Expérience professionnelle',
     items: [
       {
-        period: '2020-2022',
+        period: '2020-2023',
         title: 'Freelance',
         content: [
-          `Les missions sur lesquelles j'interviens vont de la mise en
-                    place d'un formulaire de configuration post achat à la
-                    refonte complète d'un site vitrine de réparation
-                    téléphonique…`,
+          `J'accompagne des entreprises dans la réalisation de projets
+          multiples, de la mise en place d'un formulaire d'achat à la refonte
+          complète d'un site vitrine…`,
+
+          `Pour cela, je m'adapte aux méthodologies et demandes de mes clients
+          tout en apportant mon savoir-faire et mon expérience dans le domaine,
+          qu'il s'agisse de travail en autonomie ou en équipe.`,
         ],
       },
       {
@@ -181,11 +186,11 @@ const resume: IResume = {
         period: '2018-2019',
         title: 'Agence web • Keole • CDI',
         content: [
-          `J'ai eu l'occasion de développer une place de marché
-                    immobilière, une plateforme collaborative d'élaboration de
-                    projet immobilier en copropriété, un calendrier de
-                    démarchage commercial, une FAQ intelligent pour réduire le
-                    recours au SAV, un simulateur de consommation énergétique…`,
+          `J'ai eu l'occasion de développer une place de marché immobilière, une
+          plateforme collaborative d'élaboration de projet immobilier en
+          copropriété, un calendrier de démarchage commercial, une FAQ
+          intelligent pour réduire le recours au SAV, un simulateur de
+          consommation énergétique…`,
         ],
       },
     ],
@@ -194,12 +199,11 @@ const resume: IResume = {
     title: 'Projets personnels',
     items: [
       {
-        title: 'App native • WebArchives',
-        period: '2017-2022',
+        title: 'App • WebArchives',
+        period: '2017-2023',
         content: [
-          `Un lecteur d’archives web permettant de consulter hors
-                    ligne des projets tels que Wikipédia, Wikisource, Stack
-                    Overflow…`,
+          `Un lecteur d’archives web permettant de consulter hors ligne des
+          projets tels que Wikipédia, Wikisource, Stack Overflow…`,
         ],
       },
     ],
@@ -208,17 +212,13 @@ const resume: IResume = {
     title: 'Autres expériences',
     items: [
       {
-        title: 'Autodicate • Santé',
+        title: 'Restauration',
         period: '2010-2018',
         content: [
           `Contraint d'arrêter mes études pour des raisons de santé, j'ai tout
-          de même continué à me former en autodidacte sur diverses technos,
-          avant d'enfin me lancer professionnellement en tant que dev web.`,
-
-          `Durant cette période, j'ai tout de même eu une activité
-          professionnelle, mais dans un domaine n'ayant aucun rapport avec
-          l'informatique, voilà pourquoi je préfère ne pas détailler cette
-          expérience ici.`,
+          de même continué à me former en autodidacte sur diverses technologies,
+          tout en travaillant dans la restauration, avant de me lancer
+          professionnellement dans l'informatique en tant que développeur web.`,
         ],
       },
     ],
